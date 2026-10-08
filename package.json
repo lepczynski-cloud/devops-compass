@@ -1,0 +1,15 @@
+{
+  "name": "devops-compass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A practical, human-curated DevOps learning path.",
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "dev": "npx wrangler dev",
+    "deploy": "npm run validate && npx wrangler deploy"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

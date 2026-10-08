@@ -1,0 +1,26 @@
+name: Learning path suggestion
+description: Suggest a correction, dependency or missing topic.
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: The learning map is intentionally opinionated, but every recommendation should be open to evidence-based review.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or learning unit
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+      description: Explain what should change and why.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Practical context or source
+      description: Add real-world context or an authoritative source when relevant.

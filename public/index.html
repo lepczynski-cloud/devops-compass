@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07131a">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="A practical, human-curated DevOps learning path that shows what to learn now, what to verify and what can wait.">
+  <meta name="author" content="Wojciech Lepczyński">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://devopscompass.lepczynski.it/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DevOps Compass | Know what to learn next">
+  <meta property="og:description" content="Build a practical DevOps learning path around what you already know. No account, no backend and no generic wall of tools.">
+  <meta property="og:url" content="https://devopscompass.lepczynski.it/">
+  <meta property="og:image" content="https://devopscompass.lepczynski.it/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="DevOps Compass">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevOps Compass | Know what to learn next">
+  <meta name="twitter:description" content="A practical, human-curated DevOps learning path.">
+  <meta name="twitter:image" content="https://devopscompass.lepczynski.it/assets/og-image.png">
+
+  <title>DevOps Compass | Know what to learn next</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#home" data-action="home" aria-label="DevOps Compass home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <circle cx="24" cy="24" r="18"></circle>
+            <path d="M29.6 18.4 27 27l-8.6 2.6L21 21z"></path>
+            <circle cx="24" cy="24" r="2.2"></circle>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>DevOps Compass</strong>
+          <small data-i18n="brandTagline">Know what to learn next</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#how" data-scroll="how" data-i18n="navHow">How it works</a>
+        <a href="#about" data-scroll="about" data-i18n="navAbout">About</a>
+        <a href="https://lepczynski.it/" target="_blank" rel="noopener" data-i18n="navBlog">Blog</a>
+        <a href="https://www.youtube.com/@WojciechLepczynski" target="_blank" rel="noopener">YouTube</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-action="theme" aria-label="Change color theme" title="Change color theme">
+          <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8 8.6 8.6 0 1 0 20.2 15.2Z"></path></svg>
+        </button>
+        <button class="language-button" type="button" data-action="language" aria-label="Change language">
+          <span data-language-label>PL</span>
+        </button>
+        <button class="menu-button" type="button" data-action="menu" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" data-mobile-nav hidden>
+      <a href="#how" data-scroll="how" data-i18n="navHow">How it works</a>
+      <a href="#about" data-scroll="about" data-i18n="navAbout">About</a>
+      <a href="https://lepczynski.it/" target="_blank" rel="noopener" data-i18n="navBlog">Blog</a>
+      <a href="https://www.youtube.com/@WojciechLepczynski" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://admintoolkit.lepczynski.it/" target="_blank" rel="noopener">Admin Toolkit</a>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div id="app" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand compact" href="#home" data-action="home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"></circle><path d="M29.6 18.4 27 27l-8.6 2.6L21 21z"></path><circle cx="24" cy="24" r="2.2"></circle></svg>
+          </span>
+          <span class="brand-copy"><strong>DevOps Compass</strong></span>
+        </a>
+        <p data-i18n="footerText">A practical learning path curated from real DevOps and platform engineering experience.</p>
+      </div>
+      <div>
+        <h2 data-i18n="footerExplore">Explore</h2>
+        <a href="https://lepczynski.it/" target="_blank" rel="noopener" data-i18n="navBlog">Blog</a>
+        <a href="https://www.youtube.com/@WojciechLepczynski" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://admintoolkit.lepczynski.it/" target="_blank" rel="noopener">Admin Toolkit</a>
+      </div>
+      <div>
+        <h2 data-i18n="footerProject">Project</h2>
+        <a href="https://github.com/lepczynski-cloud/devops-compass" target="_blank" rel="noopener">GitHub</a>
+        <button class="link-button" type="button" data-action="install" hidden data-install-button data-i18n="installApp">Install app</button>
+        <button class="link-button" type="button" data-action="privacy" data-i18n="privacy">Privacy</button>
+      </div>
+      <div class="footer-author">
+        <h2 data-i18n="footerMaintained">Created and maintained by</h2>
+        <a href="https://lepczynski.it/" target="_blank" rel="noopener">Wojciech Lepczyński</a>
+        <p data-i18n="footerExperience">DevOps and Platform Engineer with 10+ years of experience.</p>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© <span data-current-year></span> Wojciech Lepczyński</span>
+      <span>MIT License</span>
+      <span data-i18n="localOnly">Progress stays in this browser.</span>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="skill-dialog" aria-labelledby="skill-dialog-title">
+    <div class="modal-panel">
+      <button class="modal-close icon-button" type="button" data-action="close-skill" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+      <div id="skill-dialog-content"></div>
+    </div>
+  </dialog>
+
+  <dialog class="modal small" id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="modal-panel">
+      <button class="modal-close icon-button" type="button" data-action="close-privacy" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+      <div id="privacy-dialog-content"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+  <input type="file" accept="application/json,.json" data-import-input hidden>
+  <noscript>
+    <div class="noscript">DevOps Compass requires JavaScript to build and save your learning path.</div>
+  </noscript>
+
+  <script src="/assets/data.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
