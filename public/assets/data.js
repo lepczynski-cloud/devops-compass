@@ -1,6 +1,6 @@
 window.COMPASS_DATA = {
-  "version": "0.2.0",
-  "updated": "2026-10-08",
+  "version": "0.2.1",
+  "updated": "2026-10-09",
   "i18n": {
     "brandTagline": {
       "en": "Know what to learn next",
@@ -19,8 +19,8 @@ window.COMPASS_DATA = {
       "pl": "Blog"
     },
     "footerText": {
-      "en": "A practical learning path curated from real DevOps and platform engineering experience.",
-      "pl": "Praktyczna ścieżka nauki opracowana na podstawie doświadczenia w DevOps i platform engineering."
+      "en": "A free public beta with curated DevOps learning resources and ready prompts for any AI.",
+      "pl": "Bezpłatna publiczna beta z wybranymi materiałami do nauki DevOps i gotowymi promptami do dowolnego AI."
     },
     "footerExplore": {
       "en": "Explore",
@@ -495,8 +495,8 @@ window.COMPASS_DATA = {
       "pl": "Prywatność od początku"
     },
     "privacyText1": {
-      "en": "DevOps Compass has no application account, database or analytics. Your profile and progress are stored in localStorage in this browser.",
-      "pl": "DevOps Compass nie ma kont aplikacji, bazy danych ani analityki. Profil i postęp są przechowywane w localStorage tej przeglądarki."
+      "en": "DevOps Compass has no application account, ads, database or analytics. Your profile and progress are stored in localStorage in this browser.",
+      "pl": "DevOps Compass nie ma kont aplikacji, reklam, bazy danych ani analityki. Profil i postęp są przechowywane w localStorage tej przeglądarki."
     },
     "privacyText2": {
       "en": "The data does not synchronize automatically. Export a JSON backup to move it to another device. Clearing site data or using private browsing may remove it.",
@@ -583,12 +583,12 @@ window.COMPASS_DATA = {
       "pl": "Odśwież"
     },
     "homePromise": {
-      "en": "A focused DevOps plan with free learning resources, practical checkpoints and reusable AI tutor prompts.",
-      "pl": "Skupiona ścieżka DevOps z darmowymi materiałami, praktycznymi kryteriami i gotowymi promptami do nauki z AI."
+      "en": "Get a focused DevOps path, hand-picked free learning resources and ready tutor prompts you can use with ChatGPT, Claude, Gemini or any AI assistant.",
+      "pl": "Otrzymasz skupioną ścieżkę DevOps, wybrane darmowe materiały do nauki oraz gotowe prompty, których użyjesz z ChatGPT, Claude, Gemini lub dowolnym narzędziem AI."
     },
     "homePrimaryHint": {
-      "en": "Six short questions. No account. Your progress stays in this browser.",
-      "pl": "Sześć krótkich pytań. Bez konta. Postęp zostaje w tej przeglądarce."
+      "en": "Six short questions. Free, no ads and no account. Progress stays in this browser.",
+      "pl": "Sześć krótkich pytań. Bezpłatnie, bez reklam i konta. Postęp zostaje w tej przeglądarce."
     },
     "samplePathTitle": {
       "en": "One route, not the whole wall",
@@ -619,20 +619,20 @@ window.COMPASS_DATA = {
       "pl": "Uporządkowany zakres, pierwsze praktyczne działanie i konkretna definicja gotowości."
     },
     "valueResources": {
-      "en": "Curated free resources",
+      "en": "Hand-picked free resources",
       "pl": "Wybrane darmowe materiały"
     },
     "valueResourcesText": {
-      "en": "Official documentation, free courses and guides with a reason to use each one.",
-      "pl": "Oficjalna dokumentacja, darmowe kursy i poradniki wraz z powodem ich użycia."
+      "en": "Official documentation, free courses and practical guides selected for a specific step instead of listed without context.",
+      "pl": "Oficjalna dokumentacja, darmowe kursy i praktyczne poradniki dobrane do konkretnego kroku, a nie wrzucone na listę bez kontekstu."
     },
     "valueAi": {
-      "en": "An AI tutor prompt",
-      "pl": "Prompt dla nauczyciela AI"
+      "en": "Ready prompts for any AI",
+      "pl": "Gotowe prompty do dowolnego AI"
     },
     "valueAiText": {
-      "en": "A reusable prompt that asks for sources, verification and safe commands instead of blind answers.",
-      "pl": "Gotowy prompt wymagający źródeł, weryfikacji i bezpiecznych komend zamiast ślepych odpowiedzi."
+      "en": "Copy a context-aware tutor prompt into ChatGPT, Claude, Gemini or another AI. No API key or integration is required.",
+      "pl": "Skopiuj dopasowany prompt nauczyciela do ChatGPT, Claude, Gemini lub innego AI. Nie potrzebujesz klucza API ani integracji."
     },
     "sampleGuideTitle": {
       "en": "See the value before answering anything",
@@ -707,8 +707,8 @@ window.COMPASS_DATA = {
       "pl": "Ucz się z nauczycielem AI"
     },
     "aiTutorText": {
-      "en": "This prompt gives the model your topic, sequence and verification rules. Do not paste company data, credentials or secrets.",
-      "pl": "Ten prompt przekazuje modelowi temat, kolejność i zasady weryfikacji. Nie wklejaj danych firmowych, credentials ani sekretów."
+      "en": "Copy this prompt into any AI tool you use. It gives the model your topic, sequence and verification rules. Do not paste company data, credentials or secrets.",
+      "pl": "Skopiuj ten prompt do dowolnego narzędzia AI, którego używasz. Przekazuje modelowi temat, kolejność i zasady weryfikacji. Nie wklejaj danych firmowych, danych logowania ani sekretów."
     },
     "copyPrompt": {
       "en": "Copy AI tutor prompt",
@@ -805,6 +805,42 @@ window.COMPASS_DATA = {
     "home": {
       "en": "Home",
       "pl": "Strona główna"
+    },
+    "betaShort": {
+      "en": "Beta",
+      "pl": "Beta"
+    },
+    "betaBannerLabel": {
+      "en": "Public beta",
+      "pl": "Publiczna beta"
+    },
+    "betaBannerTitle": {
+      "en": "Actively developed. Free to test.",
+      "pl": "Projekt jest aktywnie rozwijany i bezpłatny."
+    },
+    "betaBannerText": {
+      "en": "No ads or account. Test the paths, free resources and AI prompts, then share what should improve.",
+      "pl": "Bez reklam i konta. Przetestuj ścieżki, darmowe materiały i prompty AI, a potem napisz, co warto poprawić."
+    },
+    "betaBannerAction": {
+      "en": "Share feedback",
+      "pl": "Przekaż opinię"
+    },
+    "proofFree": {
+      "en": "Free to use",
+      "pl": "Bezpłatne"
+    },
+    "proofNoAds": {
+      "en": "No ads",
+      "pl": "Bez reklam"
+    },
+    "proofAnyAi": {
+      "en": "Prompts for any AI",
+      "pl": "Prompty do dowolnego AI"
+    },
+    "footerBetaStatus": {
+      "en": "Public beta, actively developed",
+      "pl": "Publiczna beta, aktywnie rozwijana"
     }
   },
   "profiles": [

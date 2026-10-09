@@ -1,6 +1,6 @@
-# DevOps Compass 0.2.0 test report
+# DevOps Compass 0.2.1 test report
 
-Test date: 2026-10-08
+Test date: 2026-10-09
 
 ## Automated content validation
 
@@ -39,24 +39,26 @@ npm run test:ui
 
 The browser test covered:
 
-1. Home page rendering and one clear primary action.
-2. Disabled Continue action before the required choice.
-3. Starting-profile selection.
-4. Step 4 self-assessment navigation.
-5. Opening Cloud after Linux.
-6. Keeping Cloud open after the first and second answer.
-7. Confirming that the form does not jump back to Linux.
-8. Updating the answered counter without rerendering the full step.
-9. Completing onboarding and opening the dashboard.
-10. Rendering the focused route.
-11. Opening a complete learning guide.
-12. Displaying a quick win, at least two resources, a verification checklist and an AI tutor prompt.
-13. Copy-prompt feedback.
-14. Changing a learning status.
-15. Reflecting the status on the dashboard.
-16. Restoring saved progress during a simulated return visit.
-17. Rendering the Polish dashboard.
-18. Rendering at 390 px without horizontal overflow.
+1. Home page rendering, one clear primary action and a visible public beta notice.
+2. Free-to-use, no-ads and any-AI messaging in English and Polish.
+3. Disabled Continue action before the required choice.
+4. Starting-profile selection.
+5. Step 4 self-assessment navigation.
+6. Opening Cloud after Linux.
+7. Keeping Cloud open after the first and second answer.
+8. Confirming that the form does not jump back to Linux.
+9. Updating the answered counter without rerendering the full step.
+10. Completing onboarding and opening the dashboard.
+11. Rendering the focused route.
+12. Opening a complete learning guide.
+13. Displaying a quick win, at least two resources, a verification checklist and an AI tutor prompt.
+14. Copy-prompt feedback.
+15. Changing a learning status.
+16. Reflecting the status on the dashboard.
+17. Restoring saved progress during a simulated return visit.
+18. Rendering the Polish dashboard.
+19. Rendering at 390 px without horizontal overflow.
+
 
 ## Complete guide audit
 

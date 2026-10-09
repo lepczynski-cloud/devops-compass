@@ -80,7 +80,17 @@ def run_flow(browser: Browser) -> dict[str, str]:
     load(page)
 
     assert_true(page.locator('[data-action="start"]').count() >= 1, "Home should expose a clear primary start action")
+    assert_true(page.locator(".beta-notice").count() == 1, "Home should show a visible public beta notice")
+    assert_true("public beta" in page.locator(".beta-notice").inner_text().lower(), "Beta notice should identify the public beta")
+    assert_true("No ads" in page.locator(".home-proof-line").inner_text(), "Home should state that the app has no ads")
+    assert_true("any AI" in page.locator(".home-promise").inner_text(), "Home should explain that prompts work with any AI")
     assert_true(page.locator(".sample-guide").count() == 1, "Home should show a concrete guide preview")
+
+    page.locator('[data-action="language"]').click()
+    assert_true("publiczna beta" in page.locator(".beta-notice").inner_text().lower(), "Polish home should identify the public beta")
+    assert_true("Bez reklam" in page.locator(".home-proof-line").inner_text(), "Polish home should state that the app has no ads")
+    assert_true("dowolnym narzędziem AI" in page.locator(".home-promise").inner_text(), "Polish home should explain that prompts work with any AI")
+    page.locator('[data-action="language"]').click()
 
     page.locator('[data-action="start"]').first.click()
     next_button = page.locator('[data-action="wizard-next"]')

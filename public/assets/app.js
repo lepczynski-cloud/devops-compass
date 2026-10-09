@@ -180,6 +180,9 @@
     document.querySelectorAll("[data-current-year]").forEach((element) => {
       element.textContent = String(new Date().getFullYear());
     });
+    document.querySelectorAll("[data-app-version]").forEach((element) => {
+      element.textContent = DATA.version;
+    });
     const title = state.language === "pl"
       ? "DevOps Compass - Wiedz, czego uczyć się dalej"
       : "DevOps Compass - Know what to learn next";
@@ -187,8 +190,8 @@
     const description = document.querySelector('meta[name="description"]');
     if (description) {
       description.content = state.language === "pl"
-        ? "Praktyczna, ręcznie opracowana ścieżka nauki DevOps, która pokazuje, czego uczyć się teraz, co zweryfikować i co może poczekać."
-        : "A practical, human-curated DevOps learning path that shows what to learn now, what to verify and what can wait.";
+        ? "Bezpłatna publiczna beta z wybranymi materiałami do nauki DevOps i gotowymi promptami do dowolnego AI. Bez reklam i konta."
+        : "Free public beta with curated DevOps learning resources and ready prompts for any AI. No ads or account.";
     }
   }
 
@@ -223,6 +226,11 @@
     app.innerHTML = `
       <section class="home-hero shell">
         <div class="home-hero-copy">
+          <aside class="beta-notice" aria-label="${esc(t("betaBannerLabel"))}">
+            <span class="beta-notice-label">${esc(t("betaBannerLabel"))}</span>
+            <div class="beta-notice-copy"><strong>${esc(t("betaBannerTitle"))}</strong><p>${esc(t("betaBannerText"))}</p></div>
+            <a class="beta-notice-link" href="https://github.com/lepczynski-cloud/devops-compass/issues/new/choose" target="_blank" rel="noopener">${esc(t("betaBannerAction"))} ${iconArrow()}</a>
+          </aside>
           <p class="eyebrow">${esc(t("heroEyebrow"))}</p>
           <h1>${esc(t("heroTitle1"))} <span>${esc(t("heroTitle2"))}</span></h1>
           <p class="home-promise">${esc(t("homePromise"))}</p>
@@ -231,8 +239,9 @@
             <small>${esc(t("homePrimaryHint"))}</small>
           </div>
           <div class="home-proof-line" aria-label="Project qualities">
-            <span>${esc(t("proofHuman"))}</span>
-            <span>${esc(t("proofPrivate"))}</span>
+            <span>${esc(t("proofFree"))}</span>
+            <span>${esc(t("proofNoAds"))}</span>
+            <span>${esc(t("proofAnyAi"))}</span>
             <span>Open source</span>
           </div>
         </div>

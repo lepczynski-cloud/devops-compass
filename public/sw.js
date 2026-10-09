@@ -1,4 +1,4 @@
-const CACHE_NAME = "devops-compass-v0.2.0";
+const CACHE_NAME = "devops-compass-v0.2.1";
 const APP_SHELL = [
   "/",
   "/index.html",

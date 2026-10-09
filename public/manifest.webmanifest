@@ -1,7 +1,7 @@
 {
   "name": "DevOps Compass",
   "short_name": "DevOps Compass",
-  "description": "A focused DevOps learning plan with free resources, practical checkpoints and AI tutor prompts.",
+  "description": "Free DevOps learning paths with curated resources and ready prompts for any AI. Public beta, no ads and no account.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

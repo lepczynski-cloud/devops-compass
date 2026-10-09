@@ -14,7 +14,7 @@
 
 ## Description
 
-A focused, human-curated DevOps learning plan with free resources, practical checkpoints and safe AI tutor prompts. Bilingual and fully browser-based.
+Free public beta with curated DevOps learning resources and ready prompts for any AI. No ads, no account, bilingual and fully browser-based.
 
 ## Topics
 

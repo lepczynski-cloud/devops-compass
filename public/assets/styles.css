@@ -3361,3 +3361,128 @@ html[data-theme="light"] .ai-prompt {
     font-size: 11px;
   }
 }
+
+
+/* Public beta status */
+.brand-status {
+  align-self: flex-start;
+  margin: 1px 0 0 2px;
+  padding: 3px 6px;
+  border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--line));
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.beta-notice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 27px;
+  padding: 13px 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: color-mix(in srgb, var(--accent-soft) 70%, var(--panel-solid));
+}
+
+.beta-notice-label {
+  padding: 5px 7px;
+  border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--line));
+  color: var(--accent);
+  background: var(--panel-solid);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.beta-notice-copy strong,
+.beta-notice-copy p {
+  display: block;
+}
+
+.beta-notice-copy strong {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.beta-notice-copy p {
+  margin: 3px 0 0;
+  color: var(--text-soft);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.beta-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.beta-notice-link:hover {
+  color: color-mix(in srgb, var(--accent) 82%, white);
+}
+
+.beta-notice-link svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.footer-beta {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .beta-notice {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .beta-notice-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-status {
+    display: none;
+  }
+
+  .beta-notice {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+  }
+
+  .home-hero-copy h1 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .home-promise {
+    font-size: 16px;
+  }
+
+  .beta-notice-label,
+  .beta-notice-link {
+    grid-column: 1;
+    width: fit-content;
+  }
+}

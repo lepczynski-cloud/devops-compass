@@ -1,8 +1,8 @@
 {
   "name": "devops-compass",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
-  "description": "A focused DevOps learning plan with free resources, practical checkpoints and AI tutor prompts.",
+  "description": "A free public beta with curated DevOps learning resources and ready prompts for any AI.",
   "type": "module",
   "scripts": {
     "validate": "node tools/validate.mjs",

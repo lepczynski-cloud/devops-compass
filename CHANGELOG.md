@@ -2,6 +2,20 @@
 
 All notable changes to DevOps Compass are documented here.
 
+## 0.2.1 - 2026-10-09
+
+### Changed
+
+- Added a visible public beta notice to the home page and a beta badge to the application header
+- Clarified that DevOps Compass is actively developed, free to test, has no ads and requires no account
+- Reworked the primary value proposition around hand-picked free learning resources and ready prompts that work with any AI tool
+- Updated privacy, application metadata, PWA metadata, repository metadata and footer version information
+
+### Tested
+
+- Confirmed the beta notice, no-ads message and any-AI value proposition in English and Polish
+- Re-ran repository validation, the complete onboarding flow, mobile rendering and the 81-guide browser audit
+
 ## 0.2.0 - 2026-10-08
 
 ### Changed

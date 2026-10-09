@@ -119,6 +119,10 @@ for (const [direction, ids] of Object.entries(data.paths || {})) {
 for (const id of skillIds) assert(pathSkillIds.has(id), `Skill ${id} is not used by any path.`);
 
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "public/manifest.webmanifest"), "utf8"));
+const packageJson = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
+const serviceWorker = fs.readFileSync(path.join(root, "public/sw.js"), "utf8");
+assert(packageJson.version === data.version, `package.json version ${packageJson.version} does not match data version ${data.version}.`);
+assert(serviceWorker.includes(`devops-compass-v${data.version}`), "Service worker cache version does not match application version.");
 assert(manifest.name === "DevOps Compass", "Manifest name must be DevOps Compass.");
 assert(Array.isArray(manifest.icons) && manifest.icons.length >= 2, "Manifest needs application icons.");
 
@@ -126,6 +130,9 @@ const index = fs.readFileSync(path.join(root, "public/index.html"), "utf8");
 for (const reference of ["/assets/styles.css", "/assets/data.js", "/assets/app.js", "/manifest.webmanifest"]) {
   assert(index.includes(reference), `index.html does not reference ${reference}.`);
 }
+assert(index.includes('data-i18n="betaShort"'), "index.html should expose the beta status in the header.");
+assert(data.i18n.betaBannerLabel?.en === "Public beta", "English public beta label is missing.");
+assert(data.i18n.betaBannerLabel?.pl === "Publiczna beta", "Polish public beta label is missing.");
 
 const appCode = fs.readFileSync(path.join(root, "public/assets/app.js"), "utf8");
 try {

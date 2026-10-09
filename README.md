@@ -2,9 +2,11 @@
 
 ![DevOps Compass social preview](public/assets/og-image.png)
 
-A focused, human-curated DevOps learning plan with free resources, practical checkpoints and safe AI tutor prompts.
+A free public beta that builds a focused, human-curated DevOps learning path with hand-picked learning resources and ready prompts for any AI.
 
 DevOps Compass is a static, bilingual browser application. It turns a person's starting point, direction and self-declared abilities into a short sequence of useful next steps. The full competency graph stays underneath, while the interface exposes only the part that matters now.
+
+**Project status:** public beta, actively developed and free to test. The application has no ads, account requirement or paid tier.
 
 **Planned production address:** `https://devopscompass.lepczynski.it/`
 
@@ -17,7 +19,7 @@ Each recommended topic opens a complete learning guide with:
 - the concepts to understand,
 - free learning resources with a reason to use each one,
 - a verification checklist,
-- a context-aware AI tutor prompt,
+- a context-aware tutor prompt that can be copied into ChatGPT, Claude, Gemini or another AI,
 - prerequisites and the next relevant topic,
 - an estimated first-pass effort and a review date.
 
@@ -48,7 +50,7 @@ The learning order, dependencies, resources and practitioner notes are curated m
 - AI tutor prompts designed to request sources, verification and safer command variants
 - Progress stored in the browser with `localStorage`
 - JSON export and import for backups and moving between devices
-- No account, application backend, database or analytics
+- Free to use, with no ads, account, application backend, database or analytics
 - Installable PWA with offline application shell
 - Dark and light themes
 - Responsive, dependency-free interface

@@ -1,8 +1,10 @@
 # DevOps Compass
 
-DevOps Compass to statyczna, dwujęzyczna aplikacja, która zamienia punkt startowy, kierunek rozwoju i zadeklarowane umiejętności w krótki, konkretny plan nauki DevOps.
+DevOps Compass to bezpłatna, statyczna i dwujęzyczna aplikacja w publicznej wersji beta. Zamienia punkt startowy, kierunek rozwoju i zadeklarowane umiejętności w krótki, konkretny plan nauki DevOps.
 
 Nie pokazuje początkującemu całej roadmapy. Pod spodem korzysta z pełnej mapy kompetencji, ale w interfejsie wyświetla tylko to, co jest potrzebne teraz, co warto zweryfikować oraz co może poczekać.
+
+**Status projektu:** publiczna beta, aktywnie rozwijana i dostępna bezpłatnie. Aplikacja nie ma reklam, kont użytkowników ani płatnego planu.
 
 **Planowany adres:** `https://devopscompass.lepczynski.it/`
 
@@ -15,7 +17,7 @@ Każdy rekomendowany temat prowadzi do kompletnego przewodnika zawierającego:
 - pojęcia do zrozumienia,
 - bezpłatne materiały wraz z uzasadnieniem wyboru,
 - listę kryteriów do samodzielnej weryfikacji,
-- prompt do nauki z wybranym narzędziem AI,
+- gotowy prompt do skopiowania do ChatGPT, Claude, Gemini lub dowolnego innego AI,
 - wymagania wstępne i kolejny logiczny temat,
 - szacowany czas pierwszego przejścia i datę przeglądu treści.
 
