@@ -2,23 +2,39 @@
 
 ![DevOps Compass social preview](public/assets/og-image.png)
 
-A practical, human-curated DevOps learning path that shows what to learn now, what to verify and what can wait.
+A focused, human-curated DevOps learning plan with free resources, practical checkpoints and safe AI tutor prompts.
 
-DevOps Compass is a static, bilingual browser application. It builds a focused path from a person's starting point, chosen direction and self-declared abilities. The complete competency graph remains underneath, while the interface exposes only the next useful part.
+DevOps Compass is a static, bilingual browser application. It turns a person's starting point, direction and self-declared abilities into a short sequence of useful next steps. The full competency graph stays underneath, while the interface exposes only the part that matters now.
 
 **Planned production address:** `https://devopscompass.lepczynski.it/`
 
+## What users receive
+
+Each recommended topic opens a complete learning guide with:
+
+- a concrete first useful action,
+- an ordered learning plan,
+- the concepts to understand,
+- free learning resources with a reason to use each one,
+- a verification checklist,
+- a context-aware AI tutor prompt,
+- prerequisites and the next relevant topic,
+- an estimated first-pass effort and a review date.
+
+The application currently contains 81 learning units, 63 concrete capability statements and 92 curated resource entries.
+
 ## Why it exists
 
-People entering DevOps often receive a giant list of tools without a useful order. DevOps Compass takes a different approach:
+People entering DevOps often receive a large list of tools without a useful order. DevOps Compass takes a narrower approach:
 
 - concepts before product names,
 - foundations before unnecessary complexity,
 - concrete abilities instead of broad questions such as "Do you know Linux?",
-- three current priorities instead of the entire roadmap,
+- up to three current priorities instead of the complete roadmap,
+- an action and verification method for every recommendation,
 - an honest self-assessment without fake readiness percentages.
 
-The learning order, dependencies and practitioner notes are curated manually by [Wojciech Lepczyński](https://lepczynski.it/), based on more than ten years of work with DevOps, cloud platforms, CI/CD, automation, infrastructure and production systems.
+The learning order, dependencies, resources and practitioner notes are curated manually by [Wojciech Lepczyński](https://lepczynski.it/), based on more than ten years of work with DevOps, cloud platforms, CI/CD, automation, infrastructure and production systems.
 
 ## Features
 
@@ -26,8 +42,10 @@ The learning order, dependencies and practitioner notes are curated manually by 
 - Five-step, beginner-friendly onboarding
 - A safe `DevOps Foundations` path for people who do not know their specialization yet
 - Directions for DevOps, cloud, platform engineering, SRE and DevSecOps
-- 81 learning units and 63 concrete capability statements
+- 81 actionable learning guides and 92 curated free resources
 - Sections for `Learn now`, `Verify first`, `Up next`, `Later` and `Already covered`
+- Focused route view that explains the sequence without exposing the complete roadmap
+- AI tutor prompts designed to request sources, verification and safer command variants
 - Progress stored in the browser with `localStorage`
 - JSON export and import for backups and moving between devices
 - No account, application backend, database or analytics
@@ -41,6 +59,8 @@ The learning order, dependencies and practitioner notes are curated manually by 
 The application does not create an account and does not send the learning profile to an application server. Answers, progress and settings stay in the current browser.
 
 A browser profile is not a durable backup. Clearing site data, private browsing or changing devices may remove it. The application therefore provides explicit JSON export and import.
+
+Learning resources open external websites. AI prompts are copied by the user and used in a tool of their choice. DevOps Compass does not send prompt content to an AI provider.
 
 ## Technology
 
@@ -73,7 +93,17 @@ npx wrangler dev
 npm run validate
 ```
 
-Validation checks translations, unique IDs, competency dependencies, path references, required assets and JavaScript syntax.
+Validation checks translations, unique IDs, competency dependencies, direction paths, learning-resource references, HTTPS URLs, required guide fields, required assets and JavaScript syntax.
+
+An optional Chromium smoke test is also included:
+
+```bash
+python3 -m pip install playwright
+python3 -m playwright install chromium
+npm run test:ui
+```
+
+It verifies the complete onboarding flow, the step 4 state fix, progress persistence, mobile layout and every learning guide.
 
 ## Deploy to Cloudflare
 
@@ -107,21 +137,23 @@ Detailed instructions are available in:
 public/
   assets/
     app.js              Application logic and UI
-    data.js             Bilingual competency map and paths
+    data.js             Competency graph, resources and bilingual content
     styles.css          Complete visual design
   index.html            Application shell
   manifest.webmanifest  PWA manifest
   sw.js                 Offline application shell
   _headers              Security and cache headers
 tools/
-  validate.mjs          Repository validation
+  validate.mjs          Repository and content validation
+tests/
+  TEST_REPORT.md        Functional test scope and results
 docs/
   CONTENT_MODEL.md      Guide for maintaining the learning map
 ```
 
 ## Maintaining the content
 
-The application deliberately separates content from UI logic. Competency names, Polish translations, prerequisites, evidence statements and direction paths live in `public/assets/data.js`.
+The application deliberately separates content from UI logic. Competency names, translations, prerequisites, quick wins, resources, verification statements and direction paths live in `public/assets/data.js`.
 
 Read [CONTENT_MODEL.md](docs/CONTENT_MODEL.md) before changing the map.
 
@@ -133,7 +165,7 @@ Read [CONTENT_MODEL.md](docs/CONTENT_MODEL.md) before changing the map.
 
 ## Contributing
 
-Corrections and evidence-based suggestions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). The map is intentionally opinionated, but it should never be closed to review.
+Corrections and evidence-based suggestions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). The map is intentionally opinionated, but it should remain open to review.
 
 ## License
 

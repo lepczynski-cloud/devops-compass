@@ -1,13 +1,14 @@
 {
   "name": "devops-compass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "A practical, human-curated DevOps learning path.",
+  "description": "A focused DevOps learning plan with free resources, practical checkpoints and AI tutor prompts.",
   "type": "module",
   "scripts": {
     "validate": "node tools/validate.mjs",
     "dev": "npx wrangler dev",
-    "deploy": "npm run validate && npx wrangler deploy"
+    "deploy": "npm run validate && npx wrangler deploy",
+    "test:ui": "python3 tests/ui_smoke.py"
   },
   "engines": {
     "node": ">=20"

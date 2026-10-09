@@ -19,6 +19,7 @@
   const directionById = new Map(DATA.directions.map((item) => [item.id, item]));
   const areaById = new Map(DATA.areas.map((item) => [item.id, item]));
   const capabilityById = new Map(DATA.capabilities.map((item) => [item.id, item]));
+  const resourceById = new Map((DATA.resourceLibrary || []).map((item) => [item.id, item]));
 
   let view = "home";
   let wizardStep = 0;
@@ -27,6 +28,9 @@
   let areasTouched = false;
   let deferredInstallPrompt = null;
   let toastTimer = null;
+  let activeSkillId = null;
+  let previousView = "dashboard";
+  const openAssessmentAreas = new Set();
 
   const defaultLanguage = (navigator.language || "en").toLowerCase().startsWith("pl") ? "pl" : "en";
   const defaultTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
@@ -201,101 +205,119 @@
     closeMobileMenu();
     if (view === "wizard") renderWizard();
     else if (view === "dashboard" && state.onboardingComplete) renderDashboard();
+    else if (view === "skill" && activeSkillId && knownSkills.has(activeSkillId)) renderSkillGuide(activeSkillId);
     else renderHome();
   }
 
   function renderHome() {
     const primaryLabel = state.onboardingComplete ? t("continuePath") : t("buildPath");
     const primaryAction = state.onboardingComplete ? "dashboard" : "start";
+    const linux = skillById.get("linux-cli-files");
+    const sampleResources = linux.resourceIds.slice(0, 2).map((id) => resourceById.get(id)).filter(Boolean);
+    const routeNodes = [
+      ["OS", false], ["Linux", true], ["Git", true], ["Networks", true], ["Bash", false],
+      ["Containers", true], ["CI/CD", true], ["Cloud", false], ["IaC", false], ["Observability", false],
+      ["Security", false], ["Kubernetes", false], ["SRE", false], ["Platform", false], ["AI", false]
+    ];
+
     app.innerHTML = `
-      <section class="hero shell">
-        <div class="hero-copy">
+      <section class="home-hero shell">
+        <div class="home-hero-copy">
           <p class="eyebrow">${esc(t("heroEyebrow"))}</p>
-          <h1>${esc(t("heroTitle1"))}<br><span>${esc(t("heroTitle2"))}</span></h1>
-          <p class="hero-lede">${esc(t("heroLead"))}</p>
-          <div class="hero-actions">
-            <button class="button primary" type="button" data-action="${primaryAction}">${esc(primaryLabel)} ${iconArrow()}</button>
-            <button class="button secondary" type="button" data-scroll="how">${esc(t("seeHow"))}</button>
+          <h1>${esc(t("heroTitle1"))} <span>${esc(t("heroTitle2"))}</span></h1>
+          <p class="home-promise">${esc(t("homePromise"))}</p>
+          <div class="home-primary-action">
+            <button class="button primary large" type="button" data-action="${primaryAction}">${esc(primaryLabel)} ${iconArrow()}</button>
+            <small>${esc(t("homePrimaryHint"))}</small>
           </div>
-          <div class="hero-proof">
+          <div class="home-proof-line" aria-label="Project qualities">
             <span>${esc(t("proofHuman"))}</span>
             <span>${esc(t("proofPrivate"))}</span>
-            <span>${esc(t("proofBilingual"))}</span>
+            <span>Open source</span>
           </div>
         </div>
-        <div class="compass-stage" aria-hidden="true">
-          <div class="compass-orbit">
-            <div class="compass-core">
-              <svg viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="38"></circle>
-                <path d="M63 37 57 57 37 63l6-20z"></path>
-                <circle cx="50" cy="50" r="4"></circle>
-              </svg>
-            </div>
-            <div class="orbit-node node-one"><strong>${esc(state.language === "pl" ? "TERAZ" : "NOW")}</strong><small>Linux · Git · Networks</small></div>
-            <div class="orbit-node node-two"><strong>${esc(state.language === "pl" ? "ZWERYFIKUJ" : "VERIFY")}</strong><small>CI/CD · Containers</small></div>
-            <div class="orbit-node node-three"><strong>${esc(state.language === "pl" ? "PÓŹNIEJ" : "LATER")}</strong><small>Kubernetes · GitOps</small></div>
-            <div class="orbit-node node-four"><strong>${esc(state.language === "pl" ? "KIERUNEK" : "DIRECTION")}</strong><small>Cloud · Platform · SRE</small></div>
-            <span class="node-dot dot-one"></span><span class="node-dot dot-two"></span><span class="node-dot dot-three"></span>
+
+        <div class="route-demo" aria-label="${esc(t("samplePathTitle"))}">
+          <div class="terminal-bar"><span></span><span></span><span></span><code>devops-compass / route</code></div>
+          <div class="route-demo-head">
+            <div><strong>${esc(t("samplePathTitle"))}</strong><p>${esc(t("samplePathText"))}</p></div>
+            <span class="route-demo-count">5 / 15</span>
+          </div>
+          <div class="route-node-grid">
+            ${routeNodes.map(([label, active], index) => `<span class="route-demo-node ${active ? "active" : ""}" style="--i:${index}">${esc(label)}</span>`).join("")}
+          </div>
+          <div class="route-sequence" aria-hidden="true">
+            <span>Linux</span><b>→</b><span>Git</span><b>→</b><span>Networks</span><b>→</b><span>Containers</span><b>→</b><span>CI/CD</span>
           </div>
         </div>
       </section>
 
-      <section class="shell section-tight">
-        <div class="trust-strip">
-          <div class="trust-intro"><strong>${esc(t("trustIntro"))}</strong></div>
-          <div class="trust-item"><span>${esc(t("trustHumanTitle"))}</span><p>${esc(t("trustHumanText"))}</p></div>
-          <div class="trust-item"><span>${esc(t("trustLocalTitle"))}</span><p>${esc(t("trustLocalText"))}</p></div>
-          <div class="trust-item"><span>${esc(t("trustFocusedTitle"))}</span><p>${esc(t("trustFocusedText"))}</p></div>
+      <section class="home-section shell" id="how">
+        <div class="home-section-head">
+          <p class="eyebrow">${esc(t("whatYouGet"))}</p>
+          <h2>${esc(state.language === "pl" ? "Nie tylko nazwa tematu. Każdy krok prowadzi do działania." : "Not just a topic name. Every step leads to an action.")}</h2>
+        </div>
+        <div class="value-list">
+          ${valueRow("01", t("valuePriority"), t("valuePriorityText"))}
+          ${valueRow("02", t("valueGuide"), t("valueGuideText"))}
+          ${valueRow("03", t("valueResources"), t("valueResourcesText"))}
+          ${valueRow("04", t("valueAi"), t("valueAiText"))}
         </div>
       </section>
 
-      <section class="section shell" id="how">
-        <div class="section-head">
+      <section class="home-section shell sample-guide-section">
+        <div class="home-section-head split">
           <div>
-            <p class="eyebrow">${esc(t("howEyebrow"))}</p>
-            <h2>${esc(t("howTitle"))}</h2>
-            <p>${esc(t("howLead"))}</p>
+            <p class="eyebrow">${esc(t("sampleGuideTitle"))}</p>
+            <h2>${esc(txt(linux.name))}</h2>
+            <p>${esc(t("sampleGuideText"))}</p>
+          </div>
+          <span class="sample-effort">${esc(t("firstPass"))}: ${esc(linux.effort)}</span>
+        </div>
+        <div class="sample-guide">
+          <div class="sample-guide-main">
+            <span class="guide-label">${esc(t("startHere"))}</span>
+            <p class="sample-quick-win">${esc(txt(linux.quickWin))}</p>
+            <div class="sample-checks">
+              ${txt(linux.ready).map((item) => `<span>✓ ${esc(item)}</span>`).join("")}
+            </div>
+          </div>
+          <div class="sample-resources">
+            <span class="guide-label">${esc(t("freeResources"))}</span>
+            ${sampleResources.map((resource) => `<a href="${esc(resource.url)}" target="_blank" rel="noopener"><strong>${esc(txt(resource.title))}</strong><small>${esc(resource.provider)} · ${esc(txt(resource.type))}</small></a>`).join("")}
           </div>
         </div>
-        <div class="steps-grid">
+        <p class="course-boundary">${esc(t("guideNotCourse"))}</p>
+      </section>
+
+      <section class="home-section shell process-section">
+        <div class="home-section-head">
+          <p class="eyebrow">${esc(t("howEyebrow"))}</p>
+          <h2>${esc(t("howTitle"))}</h2>
+          <p>${esc(t("howLead"))}</p>
+        </div>
+        <div class="process-line">
           ${stepCard("01", t("step1Title"), t("step1Text"))}
           ${stepCard("02", t("step2Title"), t("step2Text"))}
           ${stepCard("03", t("step3Title"), t("step3Text"))}
         </div>
       </section>
 
-      <section class="section shell" id="about">
-        <div class="author-section">
-          <div class="author-card">
-            <div class="author-monogram">WL</div>
-            <h3>Wojciech Lepczyński</h3>
-            <p>${esc(t("authorCardText"))}</p>
-            <div class="author-tags">
-              <span class="tag">DevOps</span><span class="tag">Platform Engineering</span>
-              <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">CI/CD</span>
-            </div>
-          </div>
-          <div class="author-copy">
+      <section class="home-section shell" id="about">
+        <div class="about-compact">
+          <div class="author-signature"><span>WL</span><div><strong>Wojciech Lepczyński</strong><small>${esc(t("footerExperience"))}</small></div></div>
+          <div class="about-compact-copy">
             <p class="eyebrow">${esc(t("aboutEyebrow"))}</p>
             <h2>${esc(t("aboutTitle"))}</h2>
             <p>${esc(t("aboutLead"))}</p>
-            <div class="author-principles">
-              ${principle("01", t("principle1Title"), t("principle1Text"))}
-              ${principle("02", t("principle2Title"), t("principle2Text"))}
-              ${principle("03", t("principle3Title"), t("principle3Text"))}
-            </div>
             <p class="author-note">${esc(t("authorText"))}</p>
           </div>
         </div>
       </section>
 
       <section class="section-tight shell">
-        <div class="cta-band">
-          <div>
-            <h2>${esc(t("ctaTitle"))}</h2>
-            <p>${esc(t("ctaText"))}</p>
-          </div>
+        <div class="cta-band simplified">
+          <div><h2>${esc(t("ctaTitle"))}</h2><p>${esc(t("ctaText"))}</p></div>
           <button class="button primary" type="button" data-action="${primaryAction}">${esc(primaryLabel)} ${iconArrow()}</button>
         </div>
       </section>
@@ -303,7 +325,11 @@
   }
 
   function stepCard(number, title, text) {
-    return `<article class="step-card"><span class="step-number">${esc(number)}</span><h3>${esc(title)}</h3><p>${esc(text)}</p></article>`;
+    return `<div class="process-step"><span>${esc(number)}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></div>`;
+  }
+
+  function valueRow(number, title, text) {
+    return `<div class="value-row"><span>${esc(number)}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></div>`;
   }
 
   function principle(number, title, text) {
@@ -323,6 +349,7 @@
     wizardStep = 0;
     showDirectionHelp = false;
     areasTouched = Boolean(edit);
+    openAssessmentAreas.clear();
     setView("wizard");
   }
 
@@ -348,12 +375,13 @@
   function wizardActions() {
     const isLast = wizardStep === TOTAL_STEPS - 1;
     const canSkipAssessment = wizardStep === 3;
+    const blocked = (wizardStep === 0 && !draft.profile) || (wizardStep === 1 && !draft.direction);
     return `
-      <div class="wizard-actions">
-        <div>${wizardStep > 0 ? `<button class="button ghost" type="button" data-action="wizard-back">${esc(t("back"))}</button>` : ""}</div>
+      <div class="wizard-actions sticky-actions">
+        <div>${wizardStep > 0 ? `<button class="button ghost" type="button" data-action="wizard-back">${esc(t("back"))}</button>` : `<span class="wizard-action-hint">${esc(t("chooseThenContinue"))}</span>`}</div>
         <div class="wizard-actions-right">
           ${canSkipAssessment ? `<button class="button ghost" type="button" data-action="wizard-skip">${esc(t("skip"))}</button>` : ""}
-          <button class="button primary" type="button" data-action="${isLast ? "wizard-finish" : "wizard-next"}">${esc(isLast ? t("finish") : t("next"))} ${iconArrow()}</button>
+          <button class="button primary" type="button" data-action="${isLast ? "wizard-finish" : "wizard-next"}" ${blocked ? "disabled" : ""}>${esc(isLast ? t("finish") : t("next"))} ${iconArrow()}</button>
         </div>
       </div>
     `;
@@ -423,13 +451,16 @@
 
   function renderAssessmentStep() {
     const selected = DATA.areas.filter((area) => draft.selectedAreas.includes(area.id));
+    if (selected.length && !selected.some((area) => openAssessmentAreas.has(area.id))) {
+      openAssessmentAreas.add(selected[0].id);
+    }
     return `
       ${wizardTitle("setupAssessKicker", "setupAssessTitle", "setupAssessIntro")}
       ${selected.length ? `
         <div class="assessment-list">
-          ${selected.map((area, index) => assessmentGroup(area, index === 0)).join("")}
+          ${selected.map((area) => assessmentGroup(area, openAssessmentAreas.has(area.id))).join("")}
         </div>
-        <div class="wizard-note"><span class="note-mark">i</span><span>${esc(state.language === "pl" ? "Brak zaznaczenia oznacza „Nie wiem”. Kliknięcie wybranego poziomu ponownie usuwa odpowiedź." : "No selection means “Not sure”. Click the selected level again to clear the answer.")}</span></div>
+        <div class="wizard-note"><span class="note-mark">i</span><span>${esc(state.language === "pl" ? "Brak zaznaczenia oznacza „Nie wiem”. Otwarta sekcja pozostaje otwarta podczas wyboru odpowiedzi." : "No selection means “Not sure”. The open section stays open while you answer.")}</span></div>
       ` : `<div class="empty-state" style="margin-top:34px">${esc(t("setupAssessEmpty"))}</div>`}
     `;
   }
@@ -438,8 +469,8 @@
     const capabilities = area.capabilities.map((id) => capabilityById.get(id)).filter(Boolean);
     const answered = capabilities.filter((capability) => Number.isInteger(draft.assessments[capability.id])).length;
     return `
-      <details class="assessment-group" ${open ? "open" : ""}>
-        <summary><span class="area-icon">${esc(area.icon)}</span><strong>${esc(txt(area.name))}</strong><small>${answered}/${capabilities.length}</small></summary>
+      <details class="assessment-group" data-assessment-area="${esc(area.id)}" ${open ? "open" : ""}>
+        <summary><span class="area-icon">${esc(area.icon)}</span><strong>${esc(txt(area.name))}</strong><small data-assessment-count>${answered}/${capabilities.length} ${esc(t("answered"))}</small></summary>
         <div class="assessment-body">
           ${capabilities.map((capability) => capabilityRow(capability)).join("")}
         </div>
@@ -498,7 +529,7 @@
       <button class="choice-card ${selected ? "selected" : ""}" type="button" data-action="${action}" data-id="${esc(item.id)}" aria-pressed="${selected}">
         <span class="choice-icon">${esc(item.icon)}</span>
         <span><strong>${esc(txt(item.name))}</strong><p>${esc(txt(item.description))}</p></span>
-        <span class="choice-check">✓</span>
+        <span class="choice-check">${selected ? esc(t("selectedLabel")) : "✓"}</span>
       </button>
     `;
   }
@@ -645,11 +676,11 @@
 
     app.innerHTML = `
       <div class="dashboard shell">
-        <div class="dashboard-hero">
+        <div class="dashboard-hero compact-dashboard-hero">
           <div>
             <p class="eyebrow">${esc(t("welcomeBack"))}</p>
             <h1>${esc(t("dashboardTitle"))}</h1>
-            <p>${esc(t("dashboardLead"))}</p>
+            <p>${esc(state.language === "pl" ? "Otwórz przewodnik przy temacie. Znajdziesz tam konkretny plan, darmowe materiały, sposób weryfikacji i prompt dla AI." : "Open the guide for any topic. It includes a concrete plan, free resources, verification and an AI tutor prompt.")}</p>
           </div>
           <div class="dashboard-actions">
             <button class="button secondary small" type="button" data-action="edit-profile">${iconEdit()} ${esc(t("editProfile"))}</button>
@@ -667,14 +698,14 @@
         </div>
         <div class="local-banner"><span>${esc(t("savedLocally"))}</span><button class="text-link" type="button" data-action="privacy">${esc(t("privacy"))}</button></div>
 
+        <section class="dashboard-section route-context-section">
+          <div class="dashboard-section-head"><div><h2>${esc(t("routePreview"))}</h2><p>${esc(t("routePreviewText"))}</p></div></div>
+          ${renderPathLogic(result)}
+        </section>
+
         ${dashboardSection("learnNow", "learnNowDesc", result.now, "priority", true)}
         ${result.verify.length ? dashboardSection("verifyFirst", "verifyDesc", result.verify, "verify", true) : ""}
         ${dashboardSection("upNext", "upNextDesc", result.next, "", true)}
-
-        <section class="dashboard-section">
-          <div class="dashboard-section-head"><div><h2>${esc(t("pathLogic"))}</h2><p>${esc(t("pathLogicDesc"))}</p></div></div>
-          ${renderPathLogic(result)}
-        </section>
 
         <section class="dashboard-section">
           <div class="dashboard-section-head"><div><h2>${esc(t("later"))}</h2><p>${esc(t("laterDesc"))}</p></div><span class="count-badge">${result.later.length}</span></div>
@@ -727,9 +758,10 @@
         </div>
         <h3>${esc(txt(skill.name))}</h3>
         <p>${esc(txt(skill.summary))}</p>
+        <div class="skill-meta-line"><span>${esc(skill.effort || "3–6 h")}</span><span>${(skill.resourceIds || []).length} ${esc(state.language === "pl" ? "materiały" : "resources")}</span></div>
         <div class="skill-card-footer">
           <span class="chip">${esc(category)}</span>
-          ${interactive ? `<button class="text-link" type="button" data-action="skill-details" data-id="${esc(skill.id)}">${esc(t("details"))} ${iconArrow()}</button>` : ""}
+          ${interactive ? `<button class="button guide-button" type="button" data-action="skill-details" data-id="${esc(skill.id)}">${esc(t("openGuide"))} ${iconArrow()}</button>` : ""}
         </div>
         ${interactive ? `
           <select class="status-select" data-status-skill="${esc(skill.id)}" aria-label="${esc(t("status"))}" style="margin-top:12px">
@@ -752,65 +784,164 @@
 
   function renderPathLogic(result) {
     const items = [
-      ...result.covered.slice(-2).map((skill) => ({ skill, state: "covered", label: t("statusCovered") })),
-      ...result.verify.slice(0, 2).map((skill) => ({ skill, state: "verify", label: t("verifyFirst") })),
-      ...result.now.map((skill) => ({ skill, state: "now", label: t("learnNow") })),
-      ...result.next.slice(0, 3).map((skill) => ({ skill, state: "", label: t("upNext") }))
-    ].slice(-9);
+      ...result.covered.slice(-2).map((skill) => ({ skill, state: "covered", label: t("routeCovered") })),
+      ...result.verify.slice(0, 2).map((skill) => ({ skill, state: "verify", label: t("routeVerify") })),
+      ...result.now.map((skill) => ({ skill, state: "now", label: t("routeNow") })),
+      ...result.next.slice(0, 5).map((skill) => ({ skill, state: "next", label: t("routeNext") })),
+      ...result.later.slice(0, 3).map((skill) => ({ skill, state: "later", label: t("later") }))
+    ];
     if (!items.length) return emptyMessage();
     return `
-      <div class="path-list">
-        ${items.map(({ skill, state: rowState, label }) => `
-          <div class="path-row ${rowState}">
-            <div><strong>${esc(txt(skill.name))}</strong><small>${esc(txt(DATA.categoryLabels[skill.category] || skill.category))}</small></div>
-            <span class="chip">${esc(label)}</span>
+      <div class="route-board">
+        ${items.map(({ skill, state: rowState, label }, index) => `
+          <div class="route-board-item ${rowState}">
+            ${index ? `<span class="route-arrow" aria-hidden="true">→</span>` : ""}
+            <button type="button" data-action="skill-details" data-id="${esc(skill.id)}">
+              <small>${esc(label)}</small><strong>${esc(txt(skill.name))}</strong>
+            </button>
           </div>
         `).join("")}
       </div>
     `;
   }
 
-  function openSkillDialog(skillId) {
-    const skill = skillById.get(skillId);
-    if (!skill) return;
-    const dialog = document.getElementById("skill-dialog");
-    const content = document.getElementById("skill-dialog-content");
-    const prereqs = skill.prerequisites.map((id) => skillById.get(id)).filter(Boolean);
-    const status = effectiveStatus(skill);
-    content.innerHTML = `
-      <span class="modal-kicker">${esc(txt(DATA.categoryLabels[skill.category] || skill.category))}</span>
-      <h2 id="skill-dialog-title">${esc(txt(skill.name))}</h2>
-      <p class="modal-lede">${esc(txt(skill.summary))}</p>
+  function openSkillGuide(skillId) {
+    if (!knownSkills.has(skillId)) return;
+    previousView = view === "skill" ? previousView : (view === "dashboard" ? "dashboard" : "home");
+    activeSkillId = skillId;
+    setView("skill");
+  }
 
-      <div class="modal-section">
-        <h3>${esc(t("whyMatters"))}</h3>
-        <p>${esc(txt(skill.summary))}</p>
-      </div>
-      <div class="modal-section">
-        <h3>${esc(t("includes"))}</h3>
-        <ul class="clean-list">${txt(skill.topics).map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
-      </div>
-      <div class="modal-section">
-        <h3>${esc(t("readyWhen"))}</h3>
-        <ul class="clean-list">${txt(skill.ready).map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
-      </div>
-      <div class="modal-section">
-        <h3>${esc(t("learnFirst"))}</h3>
-        ${prereqs.length ? `<div class="author-tags">${prereqs.map((item) => `<span class="tag">${esc(txt(item.name))}</span>`).join("")}</div>` : `<p>${esc(t("noPrereqs"))}</p>`}
-      </div>
-      <div class="modal-section">
-        <h3>${esc(t("practitionerNote"))}</h3>
-        <p class="author-note">${esc(txt(skill.note))}</p>
-      </div>
-      <div class="modal-actions">
-        <label>
-          <span class="modal-kicker">${esc(t("status"))}</span>
-          <select class="status-select" data-status-skill="${esc(skill.id)}">${statusOptions(status)}</select>
-        </label>
-        <button class="button secondary" type="button" data-action="close-skill">${esc(t("close"))}</button>
+  function renderSkillGuide(skillId) {
+    const skill = skillById.get(skillId);
+    if (!skill) return setView(state.onboardingComplete ? "dashboard" : "home");
+    const resources = (skill.resourceIds || []).map((id) => resourceById.get(id)).filter(Boolean);
+    const prereqs = (skill.prerequisites || []).map((id) => skillById.get(id)).filter(Boolean);
+    const path = state.onboardingComplete ? orderedPath(state.direction) : [];
+    const pathIndex = path.findIndex((item) => item.id === skill.id);
+    const nextSkill = pathIndex >= 0 ? path[pathIndex + 1] : null;
+    const status = effectiveStatus(skill);
+    const category = txt(DATA.categoryLabels[skill.category] || skill.category);
+    const prompt = buildAiPrompt(skill);
+    const issueUrl = `https://github.com/lepczynski-cloud/devops-compass/issues/new?template=content_suggestion.yml&title=${encodeURIComponent(`Content: ${skill.name.en}`)}`;
+
+    app.innerHTML = `
+      <div class="learning-guide shell">
+        <button class="guide-back" type="button" data-action="back-from-guide">← ${esc(state.onboardingComplete ? t("backToPath") : t("home"))}</button>
+
+        <header class="guide-hero">
+          <div class="guide-hero-main">
+            <div class="guide-kicker"><span class="skill-icon">${esc(skill.icon)}</span><span>${esc(category)}</span></div>
+            <h1>${esc(txt(skill.name))}</h1>
+            <p>${esc(txt(skill.summary))}</p>
+            <div class="guide-meta"><span>${esc(t("firstPass"))}: <strong>${esc(skill.effort)}</strong></span><span>${esc(t("contentReviewed"))}: <strong>${esc(formatDate(skill.reviewedAt))}</strong></span><span><strong>${resources.length}</strong> ${esc(state.language === "pl" ? "darmowe materiały" : "free resources")}</span></div>
+          </div>
+          <aside class="guide-status-card">
+            <label><span>${esc(t("status"))}</span><select class="status-select" data-status-skill="${esc(skill.id)}">${statusOptions(status)}</select></label>
+            <small>${esc(t("statusHelp"))}</small>
+          </aside>
+        </header>
+
+        <section class="quick-win-panel">
+          <div class="quick-win-label"><span>01</span><strong>${esc(t("startHere"))}</strong></div>
+          <p>${esc(txt(skill.quickWin))}</p>
+        </section>
+
+        <div class="guide-layout">
+          <main class="guide-main">
+            <section class="guide-section">
+              <div class="guide-section-head"><span>02</span><div><h2>${esc(t("learningPlan"))}</h2><p>${esc(t("learningPlanIntro"))}</p></div></div>
+              <div class="learning-plan-list">
+                <article><span>1</span><div><h3>${esc(t("planUnderstand"))}</h3><p>${esc(t("planUnderstandText"))}</p><ul>${txt(skill.topics).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div></article>
+                <article><span>2</span><div><h3>${esc(t("planDo"))}</h3><p>${esc(t("planDoText"))}</p><div class="command-note">${esc(txt(skill.quickWin))}</div></div></article>
+                <article><span>3</span><div><h3>${esc(t("planVerify"))}</h3><p>${esc(t("planVerifyText"))}</p></div></article>
+              </div>
+            </section>
+
+            <section class="guide-section" id="resources">
+              <div class="guide-section-head"><span>03</span><div><h2>${esc(t("freeResources"))}</h2><p>${esc(state.language === "pl" ? "Zacznij od pierwszego materiału. Kolejne służą do uzupełnienia lub jako dokumentacja." : "Start with the first resource. Use the others to fill gaps or as reference.")}</p></div></div>
+              <div class="resource-grid">
+                ${resources.length ? resources.map((resource, index) => resourceCard(resource, index)).join("") : `<div class="empty-state">${esc(t("noResource"))}</div>`}
+              </div>
+            </section>
+
+            <section class="guide-section verification-section">
+              <div class="guide-section-head"><span>04</span><div><h2>${esc(t("verificationChecklist"))}</h2><p>${esc(state.language === "pl" ? "Nie zaznaczaj tematu jako opanowanego tylko dlatego, że przeczytałeś dokumentację." : "Do not mark the topic covered just because you read the documentation.")}</p></div></div>
+              <div class="verification-list">
+                ${txt(skill.ready).map((item) => `<label><input type="checkbox"><span>${esc(item)}</span></label>`).join("")}
+                <label><input type="checkbox"><span>${esc(state.language === "pl" ? "Potrafię wyjaśnić wynik bez kopiowania odpowiedzi z AI." : "I can explain the result without copying an AI answer.")}</span></label>
+                <label><input type="checkbox"><span>${esc(state.language === "pl" ? "Mam własny dowód: komendy, notatkę, diagram, konfigurację lub repozytorium." : "I have my own evidence: commands, notes, a diagram, configuration or repository.")}</span></label>
+              </div>
+            </section>
+
+            <section class="guide-section ai-tutor-section">
+              <div class="guide-section-head"><span>05</span><div><h2>${esc(t("aiTutor"))}</h2><p>${esc(t("aiTutorText"))}</p></div></div>
+              <div class="prompt-toolbar"><button class="button secondary small" type="button" data-action="copy-prompt" data-id="${esc(skill.id)}">${esc(t("copyPrompt"))}</button></div>
+              <textarea class="ai-prompt" readonly rows="18" data-ai-prompt="${esc(skill.id)}">${esc(prompt)}</textarea>
+            </section>
+          </main>
+
+          <aside class="guide-sidebar">
+            <section>
+              <h2>${esc(t("prerequisiteContext"))}</h2>
+              ${prereqs.length ? `<div class="sidebar-links">${prereqs.map((item) => `<button type="button" data-action="skill-details" data-id="${esc(item.id)}"><span>${esc(item.icon)}</span>${esc(txt(item.name))}</button>`).join("")}</div>` : `<p>${esc(t("noPrereqs"))}</p>`}
+            </section>
+            ${nextSkill ? `<section><h2>${esc(t("upNext"))}</h2><button class="next-guide" type="button" data-action="skill-details" data-id="${esc(nextSkill.id)}"><span>${esc(nextSkill.icon)}</span><div><strong>${esc(txt(nextSkill.name))}</strong><small>${esc(txt(nextSkill.summary))}</small></div>${iconArrow()}</button></section>` : ""}
+            <section><h2>${esc(t("practitionerNote"))}</h2><p class="author-note">${esc(txt(skill.note))}</p></section>
+            <section class="guide-feedback"><a href="${esc(issueUrl)}" target="_blank" rel="noopener">${esc(t("reportContent"))} ${iconArrow()}</a></section>
+          </aside>
+        </div>
       </div>
     `;
-    if (!dialog.open) showDialog(dialog);
+  }
+
+  function resourceCard(resource, index) {
+    return `
+      <article class="resource-card">
+        <div class="resource-card-top"><span>${String(index + 1).padStart(2, "0")}</span><span class="free-chip">${esc(t("freeLabel"))}</span></div>
+        <h3>${esc(txt(resource.title))}</h3>
+        <p class="resource-provider">${esc(resource.provider)} · ${esc(txt(resource.type))} · ${esc(resource.language)}</p>
+        <p><strong>${esc(t("resourceReason"))}:</strong> ${esc(txt(resource.note))}</p>
+        <a class="resource-link" href="${esc(resource.url)}" target="_blank" rel="noopener">${esc(t("openResource"))} ${iconArrow()}</a>
+      </article>
+    `;
+  }
+
+  function buildAiPrompt(skill) {
+    const profile = profileById.get(state.profile);
+    const direction = directionById.get(state.direction);
+    const topics = txt(skill.topics).map((item) => `- ${item}`).join("\n");
+    const ready = txt(skill.ready).map((item) => `- ${item}`).join("\n");
+    if (state.language === "pl") {
+      return `Działaj jako cierpliwy senior DevOps i nauczyciel praktyk.\n\nMój punkt startowy: ${profile ? txt(profile.name) : "nieokreślony"}.\nMój kierunek: ${direction ? txt(direction.name) : "DevOps Foundations"}.\nTemat: ${txt(skill.name)}.\nCel tematu: ${txt(skill.summary)}.\n\nZakres, który mam poznać:\n${topics}\n\nChcę dojść do momentu, w którym:\n${ready}\n\nProwadź mnie według tych zasad:\n1. Najpierw wyjaśnij model mentalny prostym językiem, ale bez spłycania.\n2. Podziel naukę na krótkie etapy i po każdym zadaj mi jedno pytanie sprawdzające. Nie podawaj od razu wszystkich odpowiedzi.\n3. Zaproponuj małe zadanie możliwe do wykonania lokalnie. Wyjaśnij każdą komendę, oczekiwany rezultat i sposób cofnięcia zmian.\n4. Dla komend destrukcyjnych lub zmieniających stan najpierw pokaż wariant read-only, dry-run albo bezpieczną alternatywę.\n5. Nie proś o sekrety, tokeny, hasła ani dane firmowe.\n6. Opieraj twierdzenia na oficjalnej dokumentacji. Podaj tytuły i adresy źródeł. Powiedz wyraźnie, gdy czegoś nie jesteś pewien.\n7. Na końcu poproś mnie o samodzielne wyjaśnienie wyniku i sprawdź je według kryteriów powyżej.\n\nZacznij od krótkiego planu i pierwszego pojęcia. Odpowiadaj po polsku, a nazwy techniczne i komendy pozostaw po angielsku.`;
+    }
+    return `Act as a patient senior DevOps engineer and practical tutor.\n\nMy starting point: ${profile ? txt(profile.name) : "not specified"}.\nMy direction: ${direction ? txt(direction.name) : "DevOps Foundations"}.\nTopic: ${txt(skill.name)}.\nOutcome: ${txt(skill.summary)}.\n\nScope I need to learn:\n${topics}\n\nI want to reach the point where:\n${ready}\n\nTeach me using these rules:\n1. Start with a clear mental model without oversimplifying it.\n2. Split the topic into short stages and ask me one checking question after each stage. Do not reveal every answer immediately.\n3. Propose a small task I can do locally. Explain every command, expected result and rollback.\n4. Before any destructive or state-changing command, show a read-only, dry-run or safer alternative.\n5. Never ask for secrets, tokens, passwords or company data.\n6. Base claims on official documentation. Give source titles and URLs, and state uncertainty clearly.\n7. Finish by asking me to explain the result independently and evaluate it against the readiness criteria above.\n\nStart with a short plan and the first concept.`;
+  }
+
+  function formatDate(value) {
+    try {
+      return new Intl.DateTimeFormat(state.language === "pl" ? "pl-PL" : "en-GB", { year: "numeric", month: "short", day: "numeric" }).format(new Date(`${value}T12:00:00Z`));
+    } catch (_) {
+      return value;
+    }
+  }
+
+  async function copyPrompt(skillId) {
+    const field = document.querySelector(`[data-ai-prompt="${CSS.escape(skillId)}"]`);
+    if (!field) return;
+    try {
+      await navigator.clipboard.writeText(field.value);
+      showToast(t("promptCopied"));
+    } catch (_) {
+      field.focus();
+      field.select();
+      try {
+        document.execCommand("copy");
+        field.setSelectionRange(0, 0);
+        field.blur();
+        showToast(t("promptCopied"));
+      } catch (_) { showToast(t("copyFailed")); }
+    }
   }
 
   function showDialog(dialog) {
@@ -968,7 +1099,6 @@
     else if (action === "menu") toggleMobileMenu();
     else if (action === "privacy") openPrivacyDialog();
     else if (action === "close-privacy") closeDialog(document.getElementById("privacy-dialog"));
-    else if (action === "close-skill") closeDialog(document.getElementById("skill-dialog"));
     else if (action === "reset") openPrivacyDialog("reset");
     else if (action === "confirm-reset") resetProgress();
     else if (action === "export") exportProgress();
@@ -1012,11 +1142,26 @@
     }
     else if (action === "set-level") {
       const value = Number(target.dataset.value);
-      if (draft.assessments[id] === value) delete draft.assessments[id];
+      const shouldClear = draft.assessments[id] === value;
+      if (shouldClear) delete draft.assessments[id];
       else draft.assessments[id] = value;
-      renderWizard();
+      const row = target.closest(".capability-row");
+      row?.querySelectorAll('[data-action="set-level"]').forEach((button) => {
+        const selected = !shouldClear && Number(button.dataset.value) === value;
+        button.classList.toggle("selected", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+      const group = target.closest("[data-assessment-area]");
+      const area = areaById.get(group?.dataset.assessmentArea);
+      if (group && area) {
+        const answered = area.capabilities.filter((capabilityId) => Number.isInteger(draft.assessments[capabilityId])).length;
+        const counter = group.querySelector("[data-assessment-count]");
+        if (counter) counter.textContent = `${answered}/${area.capabilities.length} ${t("answered")}`;
+      }
     }
-    else if (action === "skill-details") openSkillDialog(id);
+    else if (action === "skill-details") openSkillGuide(id);
+    else if (action === "back-from-guide") setView(state.onboardingComplete ? "dashboard" : previousView);
+    else if (action === "copy-prompt") copyPrompt(id);
   }
 
   function handleChange(event) {
@@ -1027,11 +1172,25 @@
       if (knownSkills.has(id) && allowedStatuses.has(value)) {
         state.skillStatus[id] = value;
         saveState();
-        const dialogOpen = document.getElementById("skill-dialog")?.open;
-        renderDashboard();
-        if (dialogOpen) openSkillDialog(id);
+        if (view === "skill" && activeSkillId === id) {
+          const help = select.closest(".guide-status-card");
+          help?.classList.add("saved-flash");
+          setTimeout(() => help?.classList.remove("saved-flash"), 700);
+          showToast(t("saved"));
+        } else if (view === "dashboard") {
+          renderDashboard();
+        }
       }
     }
+  }
+
+
+  function handleToggle(event) {
+    const details = event.target.closest?.("[data-assessment-area]");
+    if (!details) return;
+    const id = details.dataset.assessmentArea;
+    if (details.open) openAssessmentAreas.add(id);
+    else openAssessmentAreas.delete(id);
   }
 
   function registerServiceWorker() {
@@ -1055,6 +1214,7 @@
 
   document.addEventListener("click", handleClick);
   document.addEventListener("change", handleChange);
+  document.addEventListener("toggle", handleToggle, true);
   document.querySelector("[data-import-input]")?.addEventListener("change", (event) => {
     importProgress(event.target.files?.[0]);
     event.target.value = "";
@@ -1076,7 +1236,10 @@
 
   applyTheme();
   updateStaticI18n();
-  if (location.hash === "#dashboard" && state.onboardingComplete) view = "dashboard";
+  if (location.hash.startsWith("#skill=")) {
+    const requested = decodeURIComponent(location.hash.slice(7));
+    if (knownSkills.has(requested)) { activeSkillId = requested; previousView = state.onboardingComplete ? "dashboard" : "home"; view = "skill"; }
+  } else if (location.hash === "#dashboard" && state.onboardingComplete) view = "dashboard";
   render();
   registerServiceWorker();
 })();

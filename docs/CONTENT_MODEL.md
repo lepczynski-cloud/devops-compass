@@ -1,6 +1,6 @@
 # Content model
 
-DevOps Compass keeps the learning map in `public/assets/data.js`. The browser does not generate paths with an AI model. It applies deterministic rules to manually curated data.
+DevOps Compass keeps the competency graph, resources and bilingual learning content in `public/assets/data.js`. The browser does not ask an AI model to invent a path. It applies deterministic rules to manually curated data.
 
 ## Main entities
 
@@ -43,6 +43,20 @@ Capabilities are concrete self-assessment statements. Each answer uses one of fo
 
 An unanswered capability means `not sure`.
 
+### Resource library
+
+`resourceLibrary` stores reusable learning resources independently from learning units. A resource contains:
+
+- a stable ID,
+- title and provider,
+- HTTPS URL,
+- resource type,
+- language information,
+- whether access is free,
+- a bilingual explanation of why the resource is useful.
+
+Official documentation and reputable free courses are preferred. A resource may be reused by several learning units.
+
 ### Learning units
 
 A learning unit contains:
@@ -54,7 +68,13 @@ A learning unit contains:
 - prerequisites,
 - capability evidence,
 - required self-assessment level,
+- a concrete `quickWin`,
+- an estimated `effort`,
+- a `reviewedAt` date,
+- at least two valid `resourceIds`,
 - a practitioner note.
+
+The AI tutor prompt is generated from this curated content, the user's selected direction and the topic's verification criteria. The prompt instructs the selected model to use sources, avoid blind command execution, protect secrets and help the learner verify the result independently.
 
 The application can infer that a unit is covered only when all of its evidence statements meet the required level. Partial evidence places the unit in `Verify first`.
 
@@ -65,9 +85,22 @@ The application can infer that a unit is covered only when all of its evidence s
 3. Observable abilities instead of vague familiarity.
 4. No universal percentage score.
 5. A recommendation must be explainable through prerequisites.
-6. Vendor tools may be examples, not the learning goal.
-7. Security, reliability, cost and operations should appear throughout the path.
-8. Practitioner notes should be concise and based on repeatable experience.
+6. Every recommendation must lead to a concrete action.
+7. Every learning unit must include a way to verify understanding.
+8. Vendor tools may be examples, not the learning goal.
+9. Security, reliability, cost and operations should appear throughout the path.
+10. AI should support learning, not replace understanding or verification.
+11. Practitioner notes should be concise and based on repeatable experience.
+12. Resource links should be reviewed regularly and corrections should remain open to public review.
+
+## Adding a resource
+
+1. Add a unique object to `resourceLibrary`.
+2. Use an HTTPS URL.
+3. Mark whether the resource is free.
+4. Provide the reason for using it in English and Polish.
+5. Reference its ID from one or more learning units.
+6. Run repository validation.
 
 ## Adding a learning unit
 
@@ -76,7 +109,10 @@ The application can infer that a unit is covered only when all of its evidence s
 3. Add concrete capability evidence when self-assessment is possible.
 4. Add the unit to at least one direction path.
 5. Provide complete English and Polish content.
-6. Run:
+6. Add a useful quick win, effort estimate and review date.
+7. Reference at least two learning resources.
+8. Ensure the readiness statements can be used as a real verification checklist.
+9. Run:
 
 ```bash
 npm run validate
@@ -85,6 +121,17 @@ npm run validate
 ## Changing dependencies
 
 Avoid circular dependencies. The application protects itself from infinite traversal, but a cycle indicates a broken mental model and should be fixed.
+
+## Reviewing content
+
+When reviewing a learning unit:
+
+1. Open every linked resource.
+2. Confirm that it remains free or clearly mark any limitation.
+3. Check that the first useful action is still realistic for a beginner.
+4. Confirm that readiness statements describe observable results.
+5. Update `reviewedAt`.
+6. Add a changelog entry when the learning recommendation changes materially.
 
 ## Versioning
 

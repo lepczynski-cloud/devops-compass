@@ -57,6 +57,17 @@ const directionIds = uniqueIds(data.directions, "direction");
 const areaIds = uniqueIds(data.areas, "area");
 const capabilityIds = uniqueIds(data.capabilities, "capability");
 const skillIds = uniqueIds(data.skills, "skill");
+const resourceIds = uniqueIds(data.resourceLibrary, "resource");
+
+
+for (const resource of data.resourceLibrary || []) {
+  checkTranslation(resource.title, `${resource.id}.title`);
+  checkTranslation(resource.type, `${resource.id}.type`);
+  checkTranslation(resource.note, `${resource.id}.note`);
+  assert(typeof resource.provider === "string" && resource.provider.trim(), `Resource ${resource.id} is missing a provider.`);
+  assert(typeof resource.url === "string" && /^https:\/\//.test(resource.url), `Resource ${resource.id} must use an HTTPS URL.`);
+  assert(resource.free === true, `Resource ${resource.id} must be marked as free.`);
+}
 
 for (const [key, value] of Object.entries(data.i18n || {})) checkTranslation(value, `i18n.${key}`);
 
@@ -83,6 +94,11 @@ for (const skill of data.skills) {
   checkTranslation(skill.topics, `${skill.id}.topics`);
   checkTranslation(skill.ready, `${skill.id}.ready`);
   checkTranslation(skill.note, `${skill.id}.note`);
+  checkTranslation(skill.quickWin, `${skill.id}.quickWin`);
+  assert(typeof skill.effort === "string" && skill.effort.trim(), `Skill ${skill.id} is missing effort guidance.`);
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(skill.reviewedAt || ""), `Skill ${skill.id} has an invalid reviewedAt date.`);
+  assert(Array.isArray(skill.resourceIds) && skill.resourceIds.length >= 2, `Skill ${skill.id} needs at least two resources.`);
+  for (const id of skill.resourceIds || []) assert(resourceIds.has(id), `Skill ${skill.id} references unknown resource ${id}.`);
   assert(data.categoryLabels[skill.category], `Skill ${skill.id} uses unknown category ${skill.category}.`);
   for (const id of skill.prerequisites || []) assert(skillIds.has(id), `Skill ${skill.id} has unknown prerequisite ${id}.`);
   for (const id of skill.evidence || []) assert(capabilityIds.has(id), `Skill ${skill.id} has unknown evidence capability ${id}.`);
@@ -125,4 +141,4 @@ if (errors.length) {
 }
 
 console.log(`Validated DevOps Compass ${data.version}`);
-console.log(`${data.skills.length} learning units, ${data.capabilities.length} capabilities, ${Object.keys(data.paths).length} directions.`);
+console.log(`${data.skills.length} learning units, ${data.capabilities.length} capabilities, ${data.resourceLibrary.length} curated resources, ${Object.keys(data.paths).length} directions.`);

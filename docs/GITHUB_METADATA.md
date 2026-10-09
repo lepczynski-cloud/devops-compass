@@ -14,13 +14,13 @@
 
 ## Description
 
-A practical, human-curated DevOps learning path that shows what to learn now, what to verify and what can wait. Privacy-first, bilingual and fully browser-based.
+A focused, human-curated DevOps learning plan with free resources, practical checkpoints and safe AI tutor prompts. Bilingual and fully browser-based.
 
 ## Topics
 
 ```text
 devops
-devops-roadmap
+devops-learning
 learning-path
 cloud-engineering
 platform-engineering
@@ -31,6 +31,9 @@ networking
 containers
 infrastructure-as-code
 cicd
+free-resources
+ai-assisted-learning
+local-first
 vanilla-javascript
 pwa
 cloudflare-workers

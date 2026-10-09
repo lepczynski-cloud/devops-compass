@@ -1,5 +1,5 @@
 window.COMPASS_DATA = {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "updated": "2026-10-08",
   "i18n": {
     "brandTagline": {
@@ -581,6 +581,230 @@ window.COMPASS_DATA = {
     "refresh": {
       "en": "Refresh",
       "pl": "Odśwież"
+    },
+    "homePromise": {
+      "en": "A focused DevOps plan with free learning resources, practical checkpoints and reusable AI tutor prompts.",
+      "pl": "Skupiona ścieżka DevOps z darmowymi materiałami, praktycznymi kryteriami i gotowymi promptami do nauki z AI."
+    },
+    "homePrimaryHint": {
+      "en": "Six short questions. No account. Your progress stays in this browser.",
+      "pl": "Sześć krótkich pytań. Bez konta. Postęp zostaje w tej przeglądarce."
+    },
+    "samplePathTitle": {
+      "en": "One route, not the whole wall",
+      "pl": "Jedna trasa, nie cała ściana"
+    },
+    "samplePathText": {
+      "en": "The full competency graph stays underneath. The app highlights only the next useful sequence.",
+      "pl": "Pełny graf kompetencji działa pod spodem. Aplikacja podświetla tylko kolejną użyteczną sekwencję."
+    },
+    "whatYouGet": {
+      "en": "What you actually get",
+      "pl": "Co naprawdę otrzymujesz"
+    },
+    "valuePriority": {
+      "en": "A clear priority",
+      "pl": "Jasny priorytet"
+    },
+    "valuePriorityText": {
+      "en": "Up to three topics to work on now, ordered by prerequisites.",
+      "pl": "Maksymalnie trzy tematy na teraz, ułożone według zależności."
+    },
+    "valueGuide": {
+      "en": "A learning guide",
+      "pl": "Przewodnik nauki"
+    },
+    "valueGuideText": {
+      "en": "An ordered syllabus, a first practical action and a concrete definition of ready.",
+      "pl": "Uporządkowany zakres, pierwsze praktyczne działanie i konkretna definicja gotowości."
+    },
+    "valueResources": {
+      "en": "Curated free resources",
+      "pl": "Wybrane darmowe materiały"
+    },
+    "valueResourcesText": {
+      "en": "Official documentation, free courses and guides with a reason to use each one.",
+      "pl": "Oficjalna dokumentacja, darmowe kursy i poradniki wraz z powodem ich użycia."
+    },
+    "valueAi": {
+      "en": "An AI tutor prompt",
+      "pl": "Prompt dla nauczyciela AI"
+    },
+    "valueAiText": {
+      "en": "A reusable prompt that asks for sources, verification and safe commands instead of blind answers.",
+      "pl": "Gotowy prompt wymagający źródeł, weryfikacji i bezpiecznych komend zamiast ślepych odpowiedzi."
+    },
+    "sampleGuideTitle": {
+      "en": "See the value before answering anything",
+      "pl": "Zobacz wartość, zanim odpowiesz na pytania"
+    },
+    "sampleGuideText": {
+      "en": "Every recommended topic opens into a guide like this.",
+      "pl": "Każdy rekomendowany temat otwiera taki przewodnik."
+    },
+    "startHere": {
+      "en": "Start here",
+      "pl": "Zacznij tutaj"
+    },
+    "firstPass": {
+      "en": "First-pass effort",
+      "pl": "Czas na pierwsze przejście"
+    },
+    "learningPlan": {
+      "en": "Learning plan",
+      "pl": "Plan nauki"
+    },
+    "learningPlanIntro": {
+      "en": "Use this order. You do not need to consume every resource from beginning to end.",
+      "pl": "Użyj tej kolejności. Nie musisz przerabiać każdego materiału od początku do końca."
+    },
+    "planUnderstand": {
+      "en": "Build the mental model",
+      "pl": "Zbuduj model mentalny"
+    },
+    "planUnderstandText": {
+      "en": "Learn the concepts below and explain how they connect before memorizing commands.",
+      "pl": "Poznaj poniższe pojęcia i wyjaśnij ich zależności przed zapamiętywaniem komend."
+    },
+    "planDo": {
+      "en": "Do the first useful action",
+      "pl": "Wykonaj pierwsze użyteczne działanie"
+    },
+    "planDoText": {
+      "en": "Complete the quick win and keep the commands, notes or diagram as evidence.",
+      "pl": "Wykonaj quick win i zachowaj komendy, notatki lub diagram jako dowód."
+    },
+    "planVerify": {
+      "en": "Verify independently",
+      "pl": "Zweryfikuj samodzielnie"
+    },
+    "planVerifyText": {
+      "en": "Use the readiness checklist. Mark the topic covered only when you can reproduce and explain the result.",
+      "pl": "Użyj checklisty gotowości. Oznacz temat jako opanowany dopiero, gdy potrafisz odtworzyć i wyjaśnić rezultat."
+    },
+    "freeResources": {
+      "en": "Free learning resources",
+      "pl": "Darmowe materiały do nauki"
+    },
+    "resourceReason": {
+      "en": "Why use it",
+      "pl": "Dlaczego warto"
+    },
+    "openResource": {
+      "en": "Open resource",
+      "pl": "Otwórz materiał"
+    },
+    "freeLabel": {
+      "en": "Free",
+      "pl": "Darmowy"
+    },
+    "verificationChecklist": {
+      "en": "Verification checklist",
+      "pl": "Checklista weryfikacji"
+    },
+    "aiTutor": {
+      "en": "Learn with an AI tutor",
+      "pl": "Ucz się z nauczycielem AI"
+    },
+    "aiTutorText": {
+      "en": "This prompt gives the model your topic, sequence and verification rules. Do not paste company data, credentials or secrets.",
+      "pl": "Ten prompt przekazuje modelowi temat, kolejność i zasady weryfikacji. Nie wklejaj danych firmowych, credentials ani sekretów."
+    },
+    "copyPrompt": {
+      "en": "Copy AI tutor prompt",
+      "pl": "Skopiuj prompt dla AI"
+    },
+    "promptCopied": {
+      "en": "AI tutor prompt copied.",
+      "pl": "Skopiowano prompt dla AI."
+    },
+    "copyFailed": {
+      "en": "Could not copy automatically. Select the prompt and copy it manually.",
+      "pl": "Nie udało się skopiować automatycznie. Zaznacz prompt i skopiuj go ręcznie."
+    },
+    "prerequisiteContext": {
+      "en": "Prerequisites and context",
+      "pl": "Wymagania wstępne i kontekst"
+    },
+    "contentReviewed": {
+      "en": "Content reviewed",
+      "pl": "Treść sprawdzona"
+    },
+    "reportContent": {
+      "en": "Suggest a correction on GitHub",
+      "pl": "Zaproponuj poprawkę na GitHubie"
+    },
+    "backToPath": {
+      "en": "Back to my path",
+      "pl": "Wróć do mojej ścieżki"
+    },
+    "openGuide": {
+      "en": "Open learning guide",
+      "pl": "Otwórz przewodnik"
+    },
+    "chooseThenContinue": {
+      "en": "Choose one option, then use Continue below.",
+      "pl": "Wybierz jedną opcję, a potem użyj przycisku Dalej poniżej."
+    },
+    "selectedLabel": {
+      "en": "Selected",
+      "pl": "Wybrano"
+    },
+    "answered": {
+      "en": "answered",
+      "pl": "odpowiedzi"
+    },
+    "routePreview": {
+      "en": "Your focused route",
+      "pl": "Twoja skupiona trasa"
+    },
+    "routePreviewText": {
+      "en": "Grey topics stay visible as context. Highlighted topics are the sequence that matters now.",
+      "pl": "Szare tematy dają kontekst. Podświetlone elementy tworzą sekwencję ważną teraz."
+    },
+    "showRoute": {
+      "en": "Show route context",
+      "pl": "Pokaż kontekst trasy"
+    },
+    "hideRoute": {
+      "en": "Hide route context",
+      "pl": "Ukryj kontekst trasy"
+    },
+    "routeNow": {
+      "en": "Now",
+      "pl": "Teraz"
+    },
+    "routeVerify": {
+      "en": "Verify",
+      "pl": "Zweryfikuj"
+    },
+    "routeNext": {
+      "en": "Next",
+      "pl": "Następne"
+    },
+    "routeCovered": {
+      "en": "Covered",
+      "pl": "Opanowane"
+    },
+    "guideNotCourse": {
+      "en": "DevOps Compass does not replace a complete course. It removes the next-decision problem and sends you to strong free material with a concrete outcome.",
+      "pl": "DevOps Compass nie zastępuje pełnego kursu. Usuwa problem wyboru kolejnego kroku i prowadzi do dobrych darmowych materiałów z konkretnym rezultatem."
+    },
+    "resourceLanguage": {
+      "en": "Language",
+      "pl": "Język"
+    },
+    "statusHelp": {
+      "en": "This is your own progress marker, not a certification.",
+      "pl": "To Twój znacznik postępu, a nie certyfikat."
+    },
+    "noResource": {
+      "en": "No resource assigned yet. Please report this content gap.",
+      "pl": "Brak przypisanego materiału. Zgłoś tę lukę w treści."
+    },
+    "home": {
+      "en": "Home",
+      "pl": "Strona główna"
     }
   },
   "profiles": [
@@ -1880,7 +2104,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cs50",
+        "missing-semester"
+      ],
+      "quickWin": {
+        "en": "Open your system monitor. Identify CPU, memory, disk and network activity, then explain what one running process consumes.",
+        "pl": "Otwórz monitor systemu. Wskaż CPU, pamięć, dysk i sieć, a następnie wyjaśnij, jakie zasoby zużywa jeden proces."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "operating-systems",
@@ -1931,7 +2165,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "ostep",
+        "lf-linux"
+      ],
+      "quickWin": {
+        "en": "Write a one-page model connecting a program, process, service, user, file and network socket on your operating system.",
+        "pl": "Narysuj na jednej stronie zależności między programem, procesem, usługą, użytkownikiem, plikiem i socketem sieciowym."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "troubleshooting-method",
@@ -1983,7 +2227,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Restarting can restore service, but it is not a root-cause analysis.",
         "pl": "Restart może przywrócić usługę, ale nie jest analizą przyczyny źródłowej."
-      }
+      },
+      "resourceIds": [
+        "sre-troubleshooting",
+        "missing-semester"
+      ],
+      "quickWin": {
+        "en": "Take one recent technical problem and write four lines: symptom, evidence, hypothesis and the next cheapest check.",
+        "pl": "Weź jeden niedawny problem techniczny i zapisz cztery elementy: objaw, dowód, hipotezę i najtańsze kolejne sprawdzenie."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "linux-cli-files",
@@ -2033,7 +2287,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "lf-linux",
+        "gnu-coreutils",
+        "bash-manual"
+      ],
+      "quickWin": {
+        "en": "In a temporary directory, create three files, find a phrase with grep, pipe the result through sort, redirect it to a new file and inspect the exit code.",
+        "pl": "W katalogu tymczasowym utwórz trzy pliki, znajdź frazę przez grep, przekaż wynik do sort, zapisz go przez przekierowanie i sprawdź kod wyjścia."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "linux-users-permissions",
@@ -2085,7 +2350,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Broad permissions hide the problem and create a second one. Find the required identity and access instead.",
         "pl": "Szerokie uprawnienia ukrywają problem i tworzą kolejny. Ustal wymaganą tożsamość i dostęp."
-      }
+      },
+      "resourceIds": [
+        "lf-linux",
+        "man-pages"
+      ],
+      "quickWin": {
+        "en": "Create a test file, set permissions to 640, inspect them with ls -l and explain what owner, group and others can do.",
+        "pl": "Utwórz plik testowy, ustaw uprawnienia 640, sprawdź je przez ls -l i wyjaśnij prawa właściciela, grupy oraz pozostałych."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "linux-processes-services",
@@ -2136,7 +2411,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "lf-linux",
+        "systemd",
+        "man-pages"
+      ],
+      "quickWin": {
+        "en": "Find a process listening on a port, inspect its command and resource use, then check one service with systemctl status and journalctl.",
+        "pl": "Znajdź proces nasłuchujący na porcie, sprawdź jego polecenie i zasoby, a następnie przeanalizuj jedną usługę przez systemctl status i journalctl."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "linux-logs-storage",
@@ -2187,7 +2473,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "lf-linux",
+        "systemd",
+        "man-pages"
+      ],
+      "quickWin": {
+        "en": "Compare df -h and du -sh on a directory, then query system logs from the last hour and explain why the two storage commands can disagree.",
+        "pl": "Porównaj df -h i du -sh dla katalogu, sprawdź logi z ostatniej godziny i wyjaśnij, dlaczego wyniki poleceń storage mogą się różnić."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "linux-ssh",
@@ -2238,7 +2535,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "openssh",
+        "lf-linux"
+      ],
+      "quickWin": {
+        "en": "Generate an Ed25519 key pair, inspect file permissions and configure a host alias in ~/.ssh/config without copying any private key.",
+        "pl": "Wygeneruj parę kluczy Ed25519, sprawdź uprawnienia plików i skonfiguruj alias hosta w ~/.ssh/config bez kopiowania klucza prywatnego."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "networking-ip-ports",
@@ -2288,7 +2595,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cisco-networking",
+        "man-pages"
+      ],
+      "quickWin": {
+        "en": "Use ip addr, ip route and ss -lnt to identify your address, default route and listening TCP ports.",
+        "pl": "Użyj ip addr, ip route i ss -lnt, aby wskazać adres, trasę domyślną i nasłuchujące porty TCP."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "networking-dns-http-tls",
@@ -2340,7 +2657,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cloudflare-dns",
+        "mdn-http",
+        "mdn-tls",
+        "everything-curl"
+      ],
+      "quickWin": {
+        "en": "For one website, run dig, curl -I and openssl s_client. Explain the DNS result, HTTP status and certificate subject.",
+        "pl": "Dla jednej strony uruchom dig, curl -I i openssl s_client. Wyjaśnij wynik DNS, status HTTP i podmiot certyfikatu."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "networking-routing-security",
@@ -2392,7 +2721,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cisco-networking",
+        "man-pages"
+      ],
+      "quickWin": {
+        "en": "Trace how a packet leaves your machine: local address, gateway, NAT boundary and the firewall rule that could block it.",
+        "pl": "Prześledź drogę pakietu z Twojej maszyny: adres lokalny, brama, granica NAT i reguła firewalla, która może go zablokować."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "networking-proxies-lb",
@@ -2441,7 +2780,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cloudflare-lb",
+        "nginx-proxy"
+      ],
+      "quickWin": {
+        "en": "Draw browser → DNS → load balancer → reverse proxy → application and label where TLS can terminate.",
+        "pl": "Narysuj przeglądarka → DNS → load balancer → reverse proxy → aplikacja i zaznacz miejsca zakończenia TLS."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "networking-diagnostics",
@@ -2494,7 +2843,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "A timeout, connection refusal and TLS error point to different layers. Treat them as different evidence.",
         "pl": "Timeout, odrzucenie połączenia i błąd TLS wskazują różne warstwy. Traktuj je jako różne dowody."
-      }
+      },
+      "resourceIds": [
+        "everything-curl",
+        "man-pages",
+        "cloudflare-dns"
+      ],
+      "quickWin": {
+        "en": "Diagnose one URL using dig, curl -v, traceroute or tracepath and ss. Record evidence before proposing a fix.",
+        "pl": "Zdiagnozuj jeden URL przez dig, curl -v, traceroute lub tracepath oraz ss. Zapisz dowody przed zaproponowaniem naprawy."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "git-basics",
@@ -2542,7 +2902,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "pro-git",
+        "github-skills"
+      ],
+      "quickWin": {
+        "en": "Create a small repository, make two focused commits, inspect diff and log, then safely revert one change.",
+        "pl": "Utwórz małe repozytorium, wykonaj dwa skupione commity, sprawdź diff i log, a następnie bezpiecznie cofnij jedną zmianę."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "git-collaboration",
@@ -2596,7 +2966,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "pro-git",
+        "github-pr",
+        "github-skills"
+      ],
+      "quickWin": {
+        "en": "Create a branch, change the same line on two branches, resolve the conflict and explain merge versus rebase.",
+        "pl": "Utwórz branch, zmień tę samą linię na dwóch branchach, rozwiąż konflikt i wyjaśnij merge kontra rebase."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "git-releases",
@@ -2646,7 +3027,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "semver",
+        "changelog",
+        "pro-git"
+      ],
+      "quickWin": {
+        "en": "Tag a sample repository as v0.1.0, write a three-entry changelog and decide what change would require v0.2.0 or v1.0.0.",
+        "pl": "Otaguj przykładowe repo jako v0.1.0, napisz trzy wpisy changelogu i określ, co wymagałoby v0.2.0 lub v1.0.0."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "shell-automation",
@@ -2699,7 +3091,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "bash-manual",
+        "shellcheck",
+        "missing-semester"
+      ],
+      "quickWin": {
+        "en": "Write a Bash script that uses set -euo pipefail, validates one argument, logs an action and exits non-zero on failure. Run ShellCheck on it.",
+        "pl": "Napisz skrypt Bash z set -euo pipefail, walidacją argumentu, logowaniem działania i niezerowym kodem błędu. Uruchom ShellCheck."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "python-automation",
@@ -2753,7 +3156,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "python-tutorial",
+        "python-packaging"
+      ],
+      "quickWin": {
+        "en": "Create a virtual environment and a small CLI that reads JSON, handles a missing file cleanly and returns a meaningful exit code.",
+        "pl": "Utwórz środowisko wirtualne i małe CLI czytające JSON, poprawnie obsługujące brak pliku i zwracające znaczący kod wyjścia."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "data-formats-apis",
@@ -2807,7 +3220,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "jq",
+        "yaml",
+        "mdn-http"
+      ],
+      "quickWin": {
+        "en": "Fetch a public JSON endpoint with curl, filter two fields with jq and rewrite the same configuration as valid YAML.",
+        "pl": "Pobierz publiczny endpoint JSON przez curl, wybierz dwa pola w jq i zapisz tę samą konfigurację jako poprawny YAML."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "delivery-foundations",
@@ -2859,7 +3283,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "dora-guides",
+        "twelve-factor"
+      ],
+      "quickWin": {
+        "en": "Draw the route from commit to production: build, test, artifact, configuration, deployment and verification. Mark every hand-off.",
+        "pl": "Narysuj drogę od commita do produkcji: build, test, artefakt, konfiguracja, deployment i weryfikacja. Zaznacz każde przekazanie."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "testing-artifacts",
@@ -2910,7 +3344,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "github-artifacts",
+        "dora-guides",
+        "postgres-tutorial"
+      ],
+      "quickWin": {
+        "en": "For a small project, define one unit test, one integration test and the exact artifact that should be promoted between environments.",
+        "pl": "Dla małego projektu określ jeden test jednostkowy, jeden integracyjny i dokładny artefakt promowany między środowiskami."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "ci-fundamentals",
@@ -2963,7 +3408,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "github-actions",
+        "gitlab-ci",
+        "dora-guides"
+      ],
+      "quickWin": {
+        "en": "Create a workflow that runs on a push, executes one check, stores a log as an artifact and deliberately fails once so you can inspect the feedback.",
+        "pl": "Utwórz workflow uruchamiany po pushu, wykonujący kontrolę, zapisujący log jako artefakt i raz celowo kończący się błędem do analizy."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "pipeline-as-code",
@@ -3013,7 +3469,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "github-actions",
+        "gitlab-ci",
+        "jenkins-pipeline"
+      ],
+      "quickWin": {
+        "en": "Move a three-step build into a versioned pipeline file, add a reusable variable and explain where credentials must not appear.",
+        "pl": "Przenieś trzyetapowy build do wersjonowanego pliku pipeline, dodaj zmienną wielokrotnego użycia i wyjaśnij, gdzie nie mogą pojawić się credentials."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "configuration-secrets",
@@ -3067,7 +3534,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "twelve-factor",
+        "owasp-secrets"
+      ],
+      "quickWin": {
+        "en": "List configuration, secret and build-time values for a sample app. Move one hard-coded secret to a local secret mechanism and rotate it.",
+        "pl": "Wypisz konfigurację, sekrety i wartości build-time przykładowej aplikacji. Przenieś jeden sekret do lokalnego mechanizmu i go zrotuj."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "deployment-strategies",
@@ -3121,7 +3598,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-release",
+        "dora-guides",
+        "azure-patterns"
+      ],
+      "quickWin": {
+        "en": "Compare rolling, blue-green and canary for one service. Choose one, define a health signal and write the rollback trigger.",
+        "pl": "Porównaj rolling, blue-green i canary dla jednej usługi. Wybierz strategię, określ sygnał zdrowia i warunek rollbacku."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "container-fundamentals",
@@ -3174,7 +3662,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "docker-start",
+        "lf-linux"
+      ],
+      "quickWin": {
+        "en": "Run a container, inspect its process, environment, ports, logs and exit code, then explain what it shares with the host.",
+        "pl": "Uruchom kontener, sprawdź proces, środowisko, porty, logi i kod wyjścia, a potem wyjaśnij, co współdzieli z hostem."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "container-images",
@@ -3227,7 +3725,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "docker-build",
+        "docker-start"
+      ],
+      "quickWin": {
+        "en": "Build the same simple image twice, inspect its layers and size, then use a multi-stage build to remove build-only files.",
+        "pl": "Zbuduj ten sam prosty obraz dwa razy, sprawdź warstwy i rozmiar, a potem użyj multi-stage build do usunięcia plików buildowych."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "container-network-storage",
@@ -3282,7 +3790,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "docker-network",
+        "docker-volumes"
+      ],
+      "quickWin": {
+        "en": "Connect two containers by service name, publish only one port and persist one file in a named volume across container recreation.",
+        "pl": "Połącz dwa kontenery po nazwie usługi, opublikuj tylko jeden port i zachowaj plik w named volume po odtworzeniu kontenera."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "compose-troubleshooting",
@@ -3335,7 +3853,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "docker-compose",
+        "docker-start",
+        "docker-network"
+      ],
+      "quickWin": {
+        "en": "Create a two-service Compose app with a healthcheck, break one environment variable, then diagnose it using config, ps and logs.",
+        "pl": "Utwórz dwusługową aplikację Compose z healthcheckiem, zepsuj jedną zmienną środowiskową i zdiagnozuj ją przez config, ps i logs."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-fundamentals",
@@ -3384,7 +3913,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cloud-basics",
+        "aws-cloud",
+        "azure-cloud",
+        "gcp-cloud"
+      ],
+      "quickWin": {
+        "en": "Choose one simple workload and classify each component as IaaS, PaaS or SaaS. State what you manage and what the provider manages.",
+        "pl": "Wybierz prosty workload i sklasyfikuj komponenty jako IaaS, PaaS lub SaaS. Określ odpowiedzialność swoją i dostawcy."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-iam",
@@ -3437,7 +3978,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "aws-iam",
+        "aws-wa",
+        "azure-wa"
+      ],
+      "quickWin": {
+        "en": "Write a least-privilege policy for one read-only task, then list how you would test that denied actions remain denied.",
+        "pl": "Napisz politykę least privilege dla jednego zadania read-only i określ, jak sprawdzisz, że zabronione operacje nadal są blokowane."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-networking",
@@ -3490,7 +4042,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cisco-networking",
+        "aws-wa",
+        "azure-wa",
+        "gcp-wa"
+      ],
+      "quickWin": {
+        "en": "Sketch one VPC or VNet with public and private subnets, routes, a load balancer and egress. Explain every traffic boundary.",
+        "pl": "Naszkicuj VPC lub VNet z publiczną i prywatną subnetą, trasami, load balancerem i egressem. Wyjaśnij każdą granicę ruchu."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-compute-storage",
@@ -3543,7 +4107,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "aws-cloud",
+        "azure-cloud",
+        "gcp-cloud"
+      ],
+      "quickWin": {
+        "en": "Compare a VM, managed container and serverless function for one service, then choose storage based on access pattern and recovery needs.",
+        "pl": "Porównaj VM, managed container i funkcję serverless dla jednej usługi, a storage wybierz według sposobu dostępu i potrzeb odtworzenia."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-managed-services",
@@ -3596,7 +4171,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "postgres-tutorial",
+        "aws-wa",
+        "gcp-wa"
+      ],
+      "quickWin": {
+        "en": "For one database or queue, list the operational work the provider removes and the failure modes that remain yours.",
+        "pl": "Dla jednej bazy lub kolejki wypisz pracę operacyjną przejętą przez dostawcę i awarie, które nadal pozostają po Twojej stronie."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-resilience-backup",
@@ -3649,7 +4235,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Multi-AZ improves resilience. It does not replace an independent, tested backup.",
         "pl": "Multi-AZ poprawia odporność. Nie zastępuje niezależnego, przetestowanego backupu."
-      }
+      },
+      "resourceIds": [
+        "aws-wa",
+        "azure-wa",
+        "gcp-wa",
+        "sre-books"
+      ],
+      "quickWin": {
+        "en": "Define a failure boundary, RTO and RPO for one workload. Identify where the backup lives and describe a restore test.",
+        "pl": "Określ granicę awarii, RTO i RPO dla workloadu. Wskaż lokalizację backupu i opisz test odtworzenia."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-governance-cost",
@@ -3703,7 +4301,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "finops",
+        "aws-wa",
+        "azure-wa",
+        "gcp-wa"
+      ],
+      "quickWin": {
+        "en": "Create a naming and tagging rule for owner, environment and cost center, then define one budget alert and one cleanup rule.",
+        "pl": "Utwórz regułę nazw i tagów dla właściciela, środowiska i cost center, a potem określ alert budżetowy i regułę sprzątania."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "iac-fundamentals",
@@ -3756,7 +4366,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "terraform-tutorials",
+        "opentofu-intro"
+      ],
+      "quickWin": {
+        "en": "Describe one small resource declaratively, preview the change before applying it and explain idempotency and drift in your own words.",
+        "pl": "Opisz mały zasób deklaratywnie, obejrzyj plan przed zastosowaniem i wyjaśnij własnymi słowami idempotencję oraz drift."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "terraform-core",
@@ -3811,7 +4431,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "terraform-tutorials",
+        "opentofu-intro"
+      ],
+      "quickWin": {
+        "en": "Create a minimal configuration with one variable and output, run fmt, validate and plan, then inspect exactly what would change.",
+        "pl": "Utwórz minimalną konfigurację ze zmienną i outputem, uruchom fmt, validate i plan, a następnie przeanalizuj każdą zmianę."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "terraform-state-modules",
@@ -3866,7 +4496,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "terraform-state",
+        "terraform-modules",
+        "opentofu-intro"
+      ],
+      "quickWin": {
+        "en": "Inspect a state file without editing it, move repeated configuration into a module and explain how remote locking prevents corruption.",
+        "pl": "Sprawdź state bez ręcznej edycji, przenieś powtarzalną konfigurację do modułu i wyjaśnij, jak remote locking chroni przed uszkodzeniem."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "iac-delivery-testing",
@@ -3921,7 +4562,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "terraform-tests",
+        "github-actions",
+        "opa"
+      ],
+      "quickWin": {
+        "en": "Add formatting, validation, a plan and one policy or test check to a pull-request pipeline. Keep apply outside unreviewed code.",
+        "pl": "Dodaj formatowanie, walidację, plan i jedną politykę lub test do pipeline pull requestu. Nie uruchamiaj apply dla niezreviewowanego kodu."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "config-images",
@@ -3975,7 +4627,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "ansible-start",
+        "packer"
+      ],
+      "quickWin": {
+        "en": "Write one idempotent Ansible task and build one reproducible image. Run both twice and compare the second result.",
+        "pl": "Napisz jedno idempotentne zadanie Ansible i zbuduj powtarzalny obraz. Uruchom oba dwa razy i porównaj drugi wynik."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "observability-signals",
@@ -4028,7 +4690,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "otel",
+        "sre-monitoring"
+      ],
+      "quickWin": {
+        "en": "For one request, name the useful log, metric and trace fields. Explain what question each signal answers.",
+        "pl": "Dla jednego żądania określ użyteczne pola logu, metryki i trace. Wyjaśnij, na jakie pytanie odpowiada każdy sygnał."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "monitoring-dashboards",
@@ -4080,7 +4752,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "prometheus",
+        "grafana",
+        "sre-monitoring"
+      ],
+      "quickWin": {
+        "en": "Create a small dashboard with traffic, errors, latency and saturation. Remove any panel that does not support a decision.",
+        "pl": "Utwórz mały dashboard z ruchem, błędami, latencją i saturacją. Usuń panel, który nie wspiera żadnej decyzji."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "alerting",
@@ -4132,7 +4815,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "An alert that nobody can act on is usually a report, not an alert.",
         "pl": "Alert, na który nikt nie może zareagować, jest zwykle raportem, a nie alertem."
-      }
+      },
+      "resourceIds": [
+        "sre-alerting",
+        "prometheus"
+      ],
+      "quickWin": {
+        "en": "Rewrite one threshold alert so it names user impact, urgency, owner and the first diagnostic link.",
+        "pl": "Przepisz jeden alert progowy tak, aby wskazywał wpływ na użytkownika, pilność, właściciela i pierwszy link diagnostyczny."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "incident-response",
@@ -4187,7 +4880,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-incident",
+        "sre-troubleshooting"
+      ],
+      "quickWin": {
+        "en": "Write a five-line incident template: impact, start time, current evidence, mitigation owner and next update time.",
+        "pl": "Napisz pięcioliniowy szablon incydentu: wpływ, czas startu, dowody, właściciel mitigacji i czas kolejnej aktualizacji."
+      },
+      "effort": "2–5 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "runbooks-postmortems",
@@ -4239,7 +4942,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-postmortem",
+        "tech-writing"
+      ],
+      "quickWin": {
+        "en": "Turn one repeated operational task into a runbook with preconditions, safe steps, verification and rollback.",
+        "pl": "Zamień jedno powtarzalne zadanie operacyjne w runbook z warunkami wstępnymi, bezpiecznymi krokami, weryfikacją i rollbackiem."
+      },
+      "effort": "2–5 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "production-readiness",
@@ -4295,7 +5008,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "dora-guides",
+        "aws-wa"
+      ],
+      "quickWin": {
+        "en": "Review a sample service against ownership, monitoring, dependencies, capacity, security, backup, rollback and support documentation.",
+        "pl": "Przejrzyj usługę pod kątem ownershipu, monitoringu, zależności, pojemności, bezpieczeństwa, backupu, rollbacku i dokumentacji."
+      },
+      "effort": "2–5 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "reliability-fundamentals",
@@ -4346,7 +5070,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "aws-wa",
+        "azure-wa"
+      ],
+      "quickWin": {
+        "en": "Choose one service and name its users, critical dependency, failure boundary, acceptable downtime and graceful degradation.",
+        "pl": "Wybierz usługę i określ użytkowników, krytyczną zależność, granicę awarii, dopuszczalny downtime i graceful degradation."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "slo-error-budgets",
@@ -4397,7 +5132,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-alerting",
+        "sre-books"
+      ],
+      "quickWin": {
+        "en": "Define one user-visible SLI, set an SLO and calculate what a 99.9% monthly target permits as bad time.",
+        "pl": "Zdefiniuj SLI widoczny dla użytkownika, ustaw SLO i oblicz dopuszczalny zły czas dla 99,9% w miesiącu."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "capacity-performance",
@@ -4448,7 +5193,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "prometheus",
+        "grafana"
+      ],
+      "quickWin": {
+        "en": "Measure a baseline for throughput, latency and resource use, then change one load variable and compare results.",
+        "pl": "Zmierz bazowy throughput, latency i użycie zasobów, zmień jedną zmienną obciążenia i porównaj wyniki."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "disaster-recovery",
@@ -4499,7 +5255,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "aws-wa",
+        "azure-wa",
+        "gcp-wa"
+      ],
+      "quickWin": {
+        "en": "Write a restore checklist for one data store, including owner, backup location, RTO, RPO and proof that restored data is usable.",
+        "pl": "Napisz checklistę odtworzenia jednego data store z właścicielem, lokalizacją backupu, RTO, RPO i dowodem użyteczności danych."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "resilience-patterns",
@@ -4552,7 +5319,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "azure-patterns",
+        "chaos",
+        "sre-books"
+      ],
+      "quickWin": {
+        "en": "Pick one dependency failure and compare timeout, retry with backoff, circuit breaker and queueing. State the new risks each adds.",
+        "pl": "Wybierz awarię zależności i porównaj timeout, retry z backoff, circuit breaker i kolejkę. Wskaż nowe ryzyka każdego wzorca."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "security-foundations",
@@ -4604,7 +5382,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "owasp-cheatsheets",
+        "cisa-secure",
+        "openssf-training"
+      ],
+      "quickWin": {
+        "en": "Threat-model one simple service: assets, actors, entry points, trust boundaries and the three most likely abuse cases.",
+        "pl": "Wykonaj threat model prostej usługi: zasoby, aktorzy, wejścia, granice zaufania i trzy najbardziej prawdopodobne nadużycia."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "secrets-pki",
@@ -4660,7 +5449,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "owasp-secrets",
+        "mdn-tls"
+      ],
+      "quickWin": {
+        "en": "Find every place a sample secret could leak, move it out of source control and document rotation plus certificate expiry checks.",
+        "pl": "Znajdź miejsca wycieku przykładowego sekretu, usuń go z kodu i opisz rotację oraz kontrolę wygaśnięcia certyfikatu."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "secure-delivery",
@@ -4713,7 +5512,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "openssf-training",
+        "owasp-cheatsheets",
+        "github-actions"
+      ],
+      "quickWin": {
+        "en": "Add dependency, secret and static checks to one pipeline, then define which findings block delivery and who handles exceptions.",
+        "pl": "Dodaj do pipeline kontrolę zależności, sekretów i analizę statyczną, a potem określ blokujące findings i proces wyjątków."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "software-supply-chain",
@@ -4768,7 +5578,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "openssf-training",
+        "sigstore",
+        "cisa-secure"
+      ],
+      "quickWin": {
+        "en": "Generate an SBOM for one artifact, sign or verify it and record where its provenance can be checked.",
+        "pl": "Wygeneruj SBOM dla artefaktu, podpisz lub zweryfikuj go i zapisz, gdzie można sprawdzić provenance."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "cloud-container-security",
@@ -4822,7 +5643,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "k8s-security",
+        "docker-build",
+        "aws-iam"
+      ],
+      "quickWin": {
+        "en": "Review one container workload for non-root execution, minimal permissions, image pinning, network exposure and secret access.",
+        "pl": "Przejrzyj workload kontenerowy pod kątem non-root, minimalnych uprawnień, pinowania obrazu, ekspozycji sieci i sekretów."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "kubernetes-foundations",
@@ -4875,7 +5707,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Kubernetes amplifies gaps in Linux, networking, containers and delivery. It does not replace those foundations.",
         "pl": "Kubernetes uwidacznia braki w Linuxie, sieciach, kontenerach i delivery. Nie zastępuje tych fundamentów."
-      }
+      },
+      "resourceIds": [
+        "k8s-basics",
+        "k8s-concepts"
+      ],
+      "quickWin": {
+        "en": "Deploy a small workload, expose it, inspect pods and events, scale it and explain the role of Deployment, Pod and Service.",
+        "pl": "Wdróż mały workload, wystaw go, sprawdź pody i eventy, przeskaluj i wyjaśnij role Deployment, Pod i Service."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "kubernetes-workloads-networking",
@@ -4929,7 +5771,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "k8s-concepts",
+        "k8s-debug"
+      ],
+      "quickWin": {
+        "en": "Break a Service selector, use endpoints and pod labels to find the mismatch, then restore connectivity.",
+        "pl": "Zepsuj selector Service, użyj endpoints i labeli podów do znalezienia różnicy, a następnie przywróć łączność."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "kubernetes-config-storage",
@@ -4982,7 +5834,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "k8s-concepts",
+        "kustomize"
+      ],
+      "quickWin": {
+        "en": "Mount a ConfigMap and a persistent volume into a workload, update configuration and explain what survives pod recreation.",
+        "pl": "Zamontuj ConfigMap i persistent volume w workloadzie, zmień konfigurację i wyjaśnij, co przetrwa odtworzenie poda."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "kubernetes-operations-security",
@@ -5043,7 +5905,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "k8s-debug",
+        "k8s-security",
+        "prometheus"
+      ],
+      "quickWin": {
+        "en": "Diagnose one CrashLoopBackOff from describe, logs and events, then review service account, limits and security context.",
+        "pl": "Zdiagnozuj CrashLoopBackOff przez describe, logs i events, a potem sprawdź service account, limity i security context."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "helm-kustomize-gitops",
@@ -5097,7 +5970,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "helm",
+        "kustomize",
+        "opengitops",
+        "argocd"
+      ],
+      "quickWin": {
+        "en": "Render the same app with Helm and Kustomize, compare the output and explain how a reconciler detects drift from Git.",
+        "pl": "Wyrenderuj tę samą aplikację przez Helm i Kustomize, porównaj wynik i wyjaśnij, jak reconciler wykrywa drift względem Git."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "distributed-systems",
@@ -5150,7 +6035,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "twelve-factor",
+        "azure-patterns"
+      ],
+      "quickWin": {
+        "en": "Draw two services and one data store. Mark every network call, timeout, partial failure and consistency decision.",
+        "pl": "Narysuj dwie usługi i data store. Zaznacz każde połączenie, timeout, częściową awarię i decyzję o spójności."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "messaging-caching",
@@ -5200,7 +6096,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "kafka",
+        "redis",
+        "azure-patterns"
+      ],
+      "quickWin": {
+        "en": "Choose one task and decide whether it needs a queue, stream or cache. Define delivery, ordering, TTL and duplicate handling.",
+        "pl": "Wybierz zadanie i zdecyduj, czy potrzebuje kolejki, strumienia czy cache. Określ delivery, kolejność, TTL i duplikaty."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "ha-multiregion",
@@ -5252,7 +6159,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "aws-wa",
+        "azure-wa",
+        "gcp-wa",
+        "sre-books"
+      ],
+      "quickWin": {
+        "en": "Compare active-passive and active-active for one workload, including data replication, failover trigger, DNS and recovery complexity.",
+        "pl": "Porównaj active-passive i active-active dla workloadu, uwzględniając replikację danych, failover, DNS i złożoność odtworzenia."
+      },
+      "effort": "4–8 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "platform-product",
@@ -5303,7 +6222,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cncf-platforms",
+        "backstage"
+      ],
+      "quickWin": {
+        "en": "Name one developer user, one painful workflow and one measurable outcome. Do not choose a tool until these are clear.",
+        "pl": "Określ jednego użytkownika-developera, bolesny workflow i mierzalny wynik. Nie wybieraj narzędzia, dopóki nie są jasne."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "developer-experience",
@@ -5354,7 +6283,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cncf-platforms",
+        "backstage",
+        "dora-guides"
+      ],
+      "quickWin": {
+        "en": "Time one common developer task from start to verified result, list every wait and hand-off, then remove one unnecessary step.",
+        "pl": "Zmierz czas typowego zadania od startu do zweryfikowanego wyniku, wypisz oczekiwanie i hand-offy, a potem usuń jeden zbędny krok."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "golden-paths",
@@ -5405,7 +6345,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cncf-platforms",
+        "backstage",
+        "github-actions"
+      ],
+      "quickWin": {
+        "en": "Describe a self-service path for creating one service: inputs, generated assets, safe defaults, escape hatch and ownership.",
+        "pl": "Opisz self-service dla utworzenia usługi: wejścia, generowane elementy, bezpieczne domyślne ustawienia, escape hatch i ownership."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "platform-operations",
@@ -5459,7 +6410,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "cncf-platforms",
+        "opa",
+        "otel"
+      ],
+      "quickWin": {
+        "en": "Define one platform SLO, tenant boundary, support model, upgrade policy and cost allocation signal.",
+        "pl": "Określ SLO platformy, granicę tenanta, model wsparcia, politykę upgrade i sygnał alokacji kosztów."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "sre-principles",
@@ -5510,7 +6472,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "dora-guides"
+      ],
+      "quickWin": {
+        "en": "Choose one service and write a user-focused SLO, an error-budget policy and one piece of toil worth automating.",
+        "pl": "Wybierz usługę i zapisz SLO skupione na użytkowniku, politykę error budget oraz jeden toil do automatyzacji."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "toil-oncall",
@@ -5563,7 +6535,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "sre-incident"
+      ],
+      "quickWin": {
+        "en": "Review one week of operational work and classify each task as engineering, toil or interruption. Pick the highest-value reduction.",
+        "pl": "Przejrzyj tydzień pracy operacyjnej i sklasyfikuj zadania jako engineering, toil lub interruption. Wybierz najlepszą redukcję."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "reliability-automation",
@@ -5615,7 +6597,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "sre-books",
+        "chaos",
+        "github-actions"
+      ],
+      "quickWin": {
+        "en": "Automate one repetitive reliability check, make it safe to rerun and add a failure signal plus a manual escape path.",
+        "pl": "Zautomatyzuj powtarzalną kontrolę niezawodności, zapewnij bezpieczne ponowienie, sygnał błędu i ręczną ścieżkę awaryjną."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "devsecops-principles",
@@ -5666,7 +6659,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "openssf-training",
+        "owasp-cheatsheets",
+        "cisa-secure"
+      ],
+      "quickWin": {
+        "en": "Map one security control to the earliest useful delivery stage, its owner, feedback time and exception process.",
+        "pl": "Przypisz jedną kontrolę bezpieczeństwa do najwcześniejszego sensownego etapu, właściciela, czasu feedbacku i wyjątków."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "policy-compliance-code",
@@ -5718,7 +6722,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "opa",
+        "openssf-training",
+        "nist-ai"
+      ],
+      "quickWin": {
+        "en": "Write one simple policy rule, test an allowed and denied input and document who can approve an exception.",
+        "pl": "Napisz prostą regułę polityki, przetestuj dozwolone i zabronione wejście oraz opisz zatwierdzanie wyjątku."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "security-operations",
@@ -5770,7 +6785,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "owasp-cheatsheets",
+        "sre-incident",
+        "otel"
+      ],
+      "quickWin": {
+        "en": "Create a detection-to-response chain for one suspicious event: signal, context, severity, owner, containment and evidence retention.",
+        "pl": "Utwórz łańcuch od detekcji do reakcji: sygnał, kontekst, severity, owner, containment i retencja dowodów."
+      },
+      "effort": "3–6 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "finops",
@@ -5825,7 +6851,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "finops",
+        "aws-wa",
+        "azure-wa"
+      ],
+      "quickWin": {
+        "en": "Find one idle or oversized resource, estimate monthly waste, assign an owner and define a safe rightsizing or cleanup decision.",
+        "pl": "Znajdź nieużywany lub przewymiarowany zasób, oszacuj miesięczną stratę, wskaż właściciela i bezpieczną decyzję o zmianie."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "technical-communication",
@@ -5873,7 +6910,17 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "tech-writing",
+        "sre-incident"
+      ],
+      "quickWin": {
+        "en": "Rewrite one technical update into: impact, evidence, decision, risk and next action. Remove jargon that does not change the decision.",
+        "pl": "Przepisz aktualizację techniczną na: wpływ, dowód, decyzję, ryzyko i następne działanie. Usuń zbędny żargon."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "documentation-decisions",
@@ -5925,7 +6972,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "adr",
+        "c4",
+        "tech-writing"
+      ],
+      "quickWin": {
+        "en": "Create one ADR and one C4 context diagram for a decision you already made. Include alternatives and consequences.",
+        "pl": "Utwórz ADR i diagram kontekstowy C4 dla podjętej decyzji. Dodaj alternatywy i konsekwencje."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "portfolio-evidence",
@@ -5980,7 +7038,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "github-readme",
+        "adr",
+        "c4"
+      ],
+      "quickWin": {
+        "en": "Turn one project into a README with problem, architecture, decisions, verification, limitations and what you would improve next.",
+        "pl": "Zamień projekt w README z problemem, architekturą, decyzjami, weryfikacją, ograniczeniami i kolejnymi usprawnieniami."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "ai-assisted-work",
@@ -6031,7 +7100,18 @@ window.COMPASS_DATA = {
       "note": {
         "en": "Understand the concept well enough to explain your decision and verify the result.",
         "pl": "Poznaj temat na tyle dobrze, aby wyjaśnić swoją decyzję i zweryfikować rezultat."
-      }
+      },
+      "resourceIds": [
+        "openai-prompts",
+        "copilot-responsible",
+        "nist-ai"
+      ],
+      "quickWin": {
+        "en": "Ask an LLM to explain one unfamiliar DevOps concept, require sources and a verification command, then compare the answer with official documentation.",
+        "pl": "Poproś LLM o wyjaśnienie pojęcia DevOps, wymagaj źródeł i komendy weryfikacyjnej, a potem porównaj odpowiedź z dokumentacją."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     },
     {
       "id": "ai-verification-safety",
@@ -6084,7 +7164,19 @@ window.COMPASS_DATA = {
       "note": {
         "en": "The model can produce confident syntax that is outdated, destructive or wrong for your environment. Verification is part of the task.",
         "pl": "Model może wygenerować pewnie brzmiącą składnię, która jest nieaktualna, destrukcyjna lub zła dla Twojego środowiska. Weryfikacja jest częścią zadania."
-      }
+      },
+      "resourceIds": [
+        "copilot-responsible",
+        "owasp-llm",
+        "nist-ai",
+        "owasp-secrets"
+      ],
+      "quickWin": {
+        "en": "Take one generated command or IaC change. Identify side effects, secrets, privileges, destructive operations, dry-run options and rollback before execution.",
+        "pl": "Weź wygenerowaną komendę lub zmianę IaC. Przed wykonaniem wskaż skutki, sekrety, uprawnienia, destrukcję, dry-run i rollback."
+      },
+      "effort": "2–4 h",
+      "reviewedAt": "2026-10-08"
     }
   ],
   "paths": {
@@ -6558,5 +7650,1755 @@ window.COMPASS_DATA = {
       "en": "AI-assisted work",
       "pl": "Praca wspierana przez AI"
     }
-  }
+  },
+  "resourceLibrary": [
+    {
+      "id": "cs50",
+      "title": {
+        "en": "CS50x: Introduction to Computer Science",
+        "pl": "CS50x: Introduction to Computer Science"
+      },
+      "provider": "Harvard University",
+      "url": "https://cs50.harvard.edu/x/",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "A broad introduction to computing, problem solving and programming.",
+        "pl": "Szerokie wprowadzenie do informatyki, rozwiązywania problemów i programowania."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "missing-semester",
+      "title": {
+        "en": "The Missing Semester of Your CS Education",
+        "pl": "The Missing Semester of Your CS Education"
+      },
+      "provider": "MIT",
+      "url": "https://missing.csail.mit.edu/",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "Practical command line, shell, Git, debugging and tooling skills.",
+        "pl": "Praktyczne umiejętności z terminala, shella, Git, debugowania i narzędzi."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "ostep",
+      "title": {
+        "en": "Operating Systems: Three Easy Pieces",
+        "pl": "Operating Systems: Three Easy Pieces"
+      },
+      "provider": "University of Wisconsin",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "type": {
+        "en": "Free book",
+        "pl": "Free book"
+      },
+      "note": {
+        "en": "A clear mental model of processes, memory, storage and concurrency.",
+        "pl": "Czytelny model procesów, pamięci, storage i współbieżności."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-troubleshooting",
+      "title": {
+        "en": "Effective Troubleshooting",
+        "pl": "Effective Troubleshooting"
+      },
+      "provider": "Google SRE",
+      "url": "https://sre.google/sre-book/effective-troubleshooting/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "A disciplined approach to forming hypotheses and collecting evidence.",
+        "pl": "Uporządkowane podejście do hipotez i zbierania dowodów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "lf-linux",
+      "title": {
+        "en": "Introduction to Linux (LFS101)",
+        "pl": "Introduction to Linux (LFS101)"
+      },
+      "provider": "Linux Foundation",
+      "url": "https://training.linuxfoundation.org/training/introduction-to-linux/",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "Beginner-friendly Linux course covering CLI, processes, networking and Bash.",
+        "pl": "Kurs Linuxa dla początkujących obejmujący CLI, procesy, sieci i Bash."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "gnu-coreutils",
+      "title": {
+        "en": "GNU Coreutils Manual",
+        "pl": "GNU Coreutils Manual"
+      },
+      "provider": "GNU",
+      "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Reference for common file, text and system commands.",
+        "pl": "Dokumentacja typowych poleceń do plików, tekstu i systemu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "bash-manual",
+      "title": {
+        "en": "Bash Reference Manual",
+        "pl": "Bash Reference Manual"
+      },
+      "provider": "GNU",
+      "url": "https://www.gnu.org/software/bash/manual/bash.html",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Authoritative reference for Bash syntax and behavior.",
+        "pl": "Oficjalna dokumentacja składni i działania Bash."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "man-pages",
+      "title": {
+        "en": "Linux man-pages project",
+        "pl": "Linux man-pages project"
+      },
+      "provider": "man7.org",
+      "url": "https://man7.org/linux/man-pages/",
+      "type": {
+        "en": "Reference",
+        "pl": "Reference"
+      },
+      "note": {
+        "en": "Detailed Linux system call and command documentation.",
+        "pl": "Szczegółowa dokumentacja poleceń i interfejsów systemowych Linux."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "systemd",
+      "title": {
+        "en": "systemd manual",
+        "pl": "systemd manual"
+      },
+      "provider": "systemd",
+      "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.html",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Primary documentation for services, units and journal integration.",
+        "pl": "Główna dokumentacja usług, unitów i integracji z journalem."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "openssh",
+      "title": {
+        "en": "OpenSSH manual pages",
+        "pl": "OpenSSH manual pages"
+      },
+      "provider": "OpenSSH",
+      "url": "https://www.openssh.com/manual.html",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Official SSH client, server and key management references.",
+        "pl": "Oficjalna dokumentacja klienta, serwera i kluczy SSH."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cisco-networking",
+      "title": {
+        "en": "Networking learning path",
+        "pl": "Networking learning path"
+      },
+      "provider": "Cisco Skills for All",
+      "url": "https://skillsforall.com/",
+      "type": {
+        "en": "Free courses",
+        "pl": "Free courses"
+      },
+      "note": {
+        "en": "Free, structured networking fundamentals with practical context.",
+        "pl": "Darmowe, uporządkowane podstawy sieci z praktycznym kontekstem."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cloudflare-dns",
+      "title": {
+        "en": "What is DNS?",
+        "pl": "What is DNS?"
+      },
+      "provider": "Cloudflare Learning Center",
+      "url": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "A concise explanation of DNS resolution and records.",
+        "pl": "Zwięzłe wyjaśnienie rozwiązywania nazw i rekordów DNS."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "mdn-http",
+      "title": {
+        "en": "An overview of HTTP",
+        "pl": "An overview of HTTP"
+      },
+      "provider": "MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "HTTP messages, methods, status codes, headers and connections.",
+        "pl": "Komunikaty HTTP, metody, statusy, nagłówki i połączenia."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "mdn-tls",
+      "title": {
+        "en": "Transport Layer Security",
+        "pl": "Transport Layer Security"
+      },
+      "provider": "MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "Modern explanation of TLS, certificates and trust.",
+        "pl": "Współczesne wyjaśnienie TLS, certyfikatów i zaufania."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cloudflare-lb",
+      "title": {
+        "en": "What is load balancing?",
+        "pl": "What is load balancing?"
+      },
+      "provider": "Cloudflare Learning Center",
+      "url": "https://www.cloudflare.com/learning/performance/what-is-load-balancing/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "Conceptual introduction to distributing traffic across services.",
+        "pl": "Wprowadzenie do rozdzielania ruchu pomiędzy usługi."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "nginx-proxy",
+      "title": {
+        "en": "NGINX reverse proxy guide",
+        "pl": "NGINX reverse proxy guide"
+      },
+      "provider": "NGINX",
+      "url": "https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "A concrete reverse proxy configuration and request flow.",
+        "pl": "Konkretny przykład konfiguracji reverse proxy i przepływu żądania."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "everything-curl",
+      "title": {
+        "en": "Everything curl",
+        "pl": "Everything curl"
+      },
+      "provider": "curl project",
+      "url": "https://everything.curl.dev/",
+      "type": {
+        "en": "Free book",
+        "pl": "Free book"
+      },
+      "note": {
+        "en": "Practical HTTP, TLS and network diagnostics with curl.",
+        "pl": "Praktyczna diagnostyka HTTP, TLS i sieci z użyciem curl."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "pro-git",
+      "title": {
+        "en": "Pro Git",
+        "pl": "Pro Git"
+      },
+      "provider": "Git project",
+      "url": "https://git-scm.com/book/en/v2",
+      "type": {
+        "en": "Free book",
+        "pl": "Free book"
+      },
+      "note": {
+        "en": "The complete, freely available Git book.",
+        "pl": "Kompletna, darmowa książka o Git."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "github-skills",
+      "title": {
+        "en": "GitHub Skills",
+        "pl": "GitHub Skills"
+      },
+      "provider": "GitHub",
+      "url": "https://skills.github.com/",
+      "type": {
+        "en": "Free interactive courses",
+        "pl": "Free interactive courses"
+      },
+      "note": {
+        "en": "Short guided courses for repositories, pull requests and Actions.",
+        "pl": "Krótkie kursy repozytoriów, pull requestów i GitHub Actions."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "github-pr",
+      "title": {
+        "en": "Pull request documentation",
+        "pl": "Pull request documentation"
+      },
+      "provider": "GitHub",
+      "url": "https://docs.github.com/en/pull-requests",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Branches, pull requests, reviews and conflict resolution.",
+        "pl": "Branche, pull requesty, review i rozwiązywanie konfliktów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "semver",
+      "title": {
+        "en": "Semantic Versioning 2.0.0",
+        "pl": "Semantic Versioning 2.0.0"
+      },
+      "provider": "SemVer",
+      "url": "https://semver.org/",
+      "type": {
+        "en": "Specification",
+        "pl": "Specification"
+      },
+      "note": {
+        "en": "A small specification for communicating compatible and breaking changes.",
+        "pl": "Krótka specyfikacja komunikowania zmian zgodnych i niekompatybilnych."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "changelog",
+      "title": {
+        "en": "Keep a Changelog",
+        "pl": "Keep a Changelog"
+      },
+      "provider": "Keep a Changelog",
+      "url": "https://keepachangelog.com/en/1.1.0/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "A practical structure for useful release notes.",
+        "pl": "Praktyczna struktura użytecznych informacji o wydaniach."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "shellcheck",
+      "title": {
+        "en": "ShellCheck",
+        "pl": "ShellCheck"
+      },
+      "provider": "ShellCheck",
+      "url": "https://www.shellcheck.net/",
+      "type": {
+        "en": "Free analyzer",
+        "pl": "Free analyzer"
+      },
+      "note": {
+        "en": "Static analysis and explanations for common shell scripting mistakes.",
+        "pl": "Statyczna analiza i wyjaśnienia typowych błędów w skryptach shell."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "python-tutorial",
+      "title": {
+        "en": "The Python Tutorial",
+        "pl": "The Python Tutorial"
+      },
+      "provider": "Python",
+      "url": "https://docs.python.org/3/tutorial/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "The official route through core Python concepts.",
+        "pl": "Oficjalna ścieżka przez podstawowe pojęcia Pythona."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "python-packaging",
+      "title": {
+        "en": "Installing Packages",
+        "pl": "Installing Packages"
+      },
+      "provider": "Python Packaging Authority",
+      "url": "https://packaging.python.org/en/latest/tutorials/installing-packages/",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "Virtual environments, pip and dependency installation.",
+        "pl": "Środowiska wirtualne, pip i instalowanie zależności."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "jq",
+      "title": {
+        "en": "jq Manual",
+        "pl": "jq Manual"
+      },
+      "provider": "jq",
+      "url": "https://jqlang.github.io/jq/manual/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Querying and transforming JSON from the command line.",
+        "pl": "Wyszukiwanie i przetwarzanie JSON z terminala."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "yaml",
+      "title": {
+        "en": "YAML 1.2.2 Specification",
+        "pl": "YAML 1.2.2 Specification"
+      },
+      "provider": "YAML",
+      "url": "https://yaml.org/spec/1.2.2/",
+      "type": {
+        "en": "Specification",
+        "pl": "Specification"
+      },
+      "note": {
+        "en": "The source of truth for YAML structures and edge cases.",
+        "pl": "Źródło prawdy o strukturach YAML i przypadkach brzegowych."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "postgres-tutorial",
+      "title": {
+        "en": "PostgreSQL Tutorial",
+        "pl": "PostgreSQL Tutorial"
+      },
+      "provider": "PostgreSQL",
+      "url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Relational database, SQL and transaction fundamentals.",
+        "pl": "Podstawy relacyjnych baz danych, SQL i transakcji."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "twelve-factor",
+      "title": {
+        "en": "The Twelve-Factor App",
+        "pl": "The Twelve-Factor App"
+      },
+      "provider": "12factor.net",
+      "url": "https://12factor.net/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "A durable model for deployable, configurable services.",
+        "pl": "Trwały model wdrażalnych i konfigurowalnych usług."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "dora-guides",
+      "title": {
+        "en": "DORA guides",
+        "pl": "DORA guides"
+      },
+      "provider": "DORA",
+      "url": "https://dora.dev/guides/",
+      "type": {
+        "en": "Research-backed guides",
+        "pl": "Research-backed guides"
+      },
+      "note": {
+        "en": "Delivery performance, continuous delivery and improvement guidance.",
+        "pl": "Wskazówki o wydajności dostarczania, continuous delivery i doskonaleniu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "github-actions",
+      "title": {
+        "en": "GitHub Actions quickstart",
+        "pl": "GitHub Actions quickstart"
+      },
+      "provider": "GitHub",
+      "url": "https://docs.github.com/actions/get-started/quickstart",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Build a first workflow and understand events, jobs and steps.",
+        "pl": "Zbuduj pierwszy workflow i poznaj eventy, joby oraz kroki."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "gitlab-ci",
+      "title": {
+        "en": "GitLab CI/CD tutorial",
+        "pl": "GitLab CI/CD tutorial"
+      },
+      "provider": "GitLab",
+      "url": "https://docs.gitlab.com/ci/quick_start/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Create and run a first pipeline from a repository.",
+        "pl": "Utwórz i uruchom pierwszy pipeline z repozytorium."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "jenkins-pipeline",
+      "title": {
+        "en": "Using a Jenkinsfile",
+        "pl": "Using a Jenkinsfile"
+      },
+      "provider": "Jenkins",
+      "url": "https://www.jenkins.io/doc/book/pipeline/jenkinsfile/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Pipeline as code with stages, environment and credentials.",
+        "pl": "Pipeline jako kod z etapami, środowiskiem i credentials."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "github-artifacts",
+      "title": {
+        "en": "Store and share data with workflow artifacts",
+        "pl": "Store and share data with workflow artifacts"
+      },
+      "provider": "GitHub",
+      "url": "https://docs.github.com/actions/using-workflows/storing-workflow-data-as-artifacts",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Understand artifacts, retention and passing outputs between jobs.",
+        "pl": "Poznaj artefakty, retencję i przekazywanie wyników pomiędzy jobami."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "owasp-secrets",
+      "title": {
+        "en": "Secrets Management Cheat Sheet",
+        "pl": "Secrets Management Cheat Sheet"
+      },
+      "provider": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+      "type": {
+        "en": "Security guide",
+        "pl": "Security guide"
+      },
+      "note": {
+        "en": "Lifecycle, storage, rotation and access rules for secrets.",
+        "pl": "Cykl życia, przechowywanie, rotacja i dostęp do sekretów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-release",
+      "title": {
+        "en": "Release Engineering",
+        "pl": "Release Engineering"
+      },
+      "provider": "Google SRE",
+      "url": "https://sre.google/sre-book/release-engineering/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "Reliable and repeatable build and release practices.",
+        "pl": "Niezawodne i powtarzalne praktyki budowania i wydawania."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "docker-start",
+      "title": {
+        "en": "Docker Get Started",
+        "pl": "Docker Get Started"
+      },
+      "provider": "Docker",
+      "url": "https://docs.docker.com/get-started/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Images, containers and a first containerized application.",
+        "pl": "Obrazy, kontenery i pierwsza skonteneryzowana aplikacja."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "docker-build",
+      "title": {
+        "en": "Building best practices",
+        "pl": "Building best practices"
+      },
+      "provider": "Docker",
+      "url": "https://docs.docker.com/build/building/best-practices/",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "Efficient, reproducible and safer image builds.",
+        "pl": "Wydajne, powtarzalne i bezpieczniejsze budowanie obrazów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "docker-network",
+      "title": {
+        "en": "Docker networking",
+        "pl": "Docker networking"
+      },
+      "provider": "Docker",
+      "url": "https://docs.docker.com/engine/network/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Network drivers, service communication and published ports.",
+        "pl": "Sterowniki sieciowe, komunikacja usług i publikowanie portów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "docker-volumes",
+      "title": {
+        "en": "Docker volumes",
+        "pl": "Docker volumes"
+      },
+      "provider": "Docker",
+      "url": "https://docs.docker.com/engine/storage/volumes/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Persistent data and the volume lifecycle.",
+        "pl": "Trwałe dane i cykl życia wolumenów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "docker-compose",
+      "title": {
+        "en": "Docker Compose",
+        "pl": "Docker Compose"
+      },
+      "provider": "Docker",
+      "url": "https://docs.docker.com/compose/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Define and operate multi-container applications.",
+        "pl": "Definiowanie i obsługa aplikacji wielokontenerowych."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cloud-basics",
+      "title": {
+        "en": "What is the cloud?",
+        "pl": "What is the cloud?"
+      },
+      "provider": "Cloudflare Learning Center",
+      "url": "https://www.cloudflare.com/learning/cloud/what-is-the-cloud/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "Provider-neutral explanation of cloud service models and trade-offs.",
+        "pl": "Niezależne od dostawcy wyjaśnienie modeli i kompromisów chmury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "aws-cloud",
+      "title": {
+        "en": "AWS Cloud Practitioner Essentials",
+        "pl": "AWS Cloud Practitioner Essentials"
+      },
+      "provider": "AWS Skill Builder",
+      "url": "https://skillbuilder.aws/learn/aws-cloud-practitioner-essentials/",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "AWS concepts, services, security, architecture and pricing.",
+        "pl": "Pojęcia, usługi, bezpieczeństwo, architektura i ceny AWS."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "azure-cloud",
+      "title": {
+        "en": "Azure Fundamentals learning path",
+        "pl": "Azure Fundamentals learning path"
+      },
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/training/paths/azure-fundamentals-describe-azure-architecture-services/",
+      "type": {
+        "en": "Free learning path",
+        "pl": "Free learning path"
+      },
+      "note": {
+        "en": "Core Azure architecture, services and management concepts.",
+        "pl": "Podstawowa architektura, usługi i zarządzanie Azure."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "gcp-cloud",
+      "title": {
+        "en": "Cloud infrastructure training",
+        "pl": "Cloud infrastructure training"
+      },
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/learn/training/cloud-infrastructure",
+      "type": {
+        "en": "Free and paid learning",
+        "pl": "Free and paid learning"
+      },
+      "note": {
+        "en": "Google Cloud infrastructure learning resources and paths.",
+        "pl": "Materiały i ścieżki nauki infrastruktury Google Cloud."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "aws-iam",
+      "title": {
+        "en": "Security best practices in IAM",
+        "pl": "Security best practices in IAM"
+      },
+      "provider": "AWS",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Least privilege, federation, temporary credentials and review.",
+        "pl": "Least privilege, federacja, tymczasowe credentials i przeglądy."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "aws-wa",
+      "title": {
+        "en": "AWS Well-Architected Framework",
+        "pl": "AWS Well-Architected Framework"
+      },
+      "provider": "AWS",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "type": {
+        "en": "Architecture framework",
+        "pl": "Architecture framework"
+      },
+      "note": {
+        "en": "Operational, security, reliability, performance and cost trade-offs.",
+        "pl": "Kompromisy operacyjne, bezpieczeństwa, niezawodności, wydajności i kosztów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "azure-wa",
+      "title": {
+        "en": "Azure Well-Architected Framework",
+        "pl": "Azure Well-Architected Framework"
+      },
+      "provider": "Microsoft",
+      "url": "https://learn.microsoft.com/azure/well-architected/",
+      "type": {
+        "en": "Architecture framework",
+        "pl": "Architecture framework"
+      },
+      "note": {
+        "en": "Design principles and review guidance for Azure workloads.",
+        "pl": "Zasady projektowania i przeglądu workloadów Azure."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "gcp-wa",
+      "title": {
+        "en": "Google Cloud Architecture Framework",
+        "pl": "Google Cloud Architecture Framework"
+      },
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/architecture/framework",
+      "type": {
+        "en": "Architecture framework",
+        "pl": "Architecture framework"
+      },
+      "note": {
+        "en": "Provider guidance for secure, reliable and cost-aware systems.",
+        "pl": "Wskazówki dla bezpiecznych, niezawodnych i świadomych kosztów systemów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "terraform-tutorials",
+      "title": {
+        "en": "Terraform tutorials",
+        "pl": "Terraform tutorials"
+      },
+      "provider": "HashiCorp",
+      "url": "https://developer.hashicorp.com/terraform/tutorials",
+      "type": {
+        "en": "Official tutorials",
+        "pl": "Official tutorials"
+      },
+      "note": {
+        "en": "Guided Infrastructure as Code tutorials across providers.",
+        "pl": "Prowadzone tutoriale Infrastructure as Code dla różnych dostawców."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "opentofu-intro",
+      "title": {
+        "en": "OpenTofu introduction",
+        "pl": "OpenTofu introduction"
+      },
+      "provider": "OpenTofu",
+      "url": "https://opentofu.org/docs/intro/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Open-source Terraform-compatible IaC concepts and workflow.",
+        "pl": "Otwartoźródłowe pojęcia i workflow IaC zgodne z Terraform."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "terraform-state",
+      "title": {
+        "en": "Terraform state",
+        "pl": "Terraform state"
+      },
+      "provider": "HashiCorp",
+      "url": "https://developer.hashicorp.com/terraform/language/state",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Why state exists, how it maps resources and why it needs protection.",
+        "pl": "Dlaczego stan istnieje, jak mapuje zasoby i dlaczego trzeba go chronić."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "terraform-modules",
+      "title": {
+        "en": "Terraform modules",
+        "pl": "Terraform modules"
+      },
+      "provider": "HashiCorp",
+      "url": "https://developer.hashicorp.com/terraform/language/modules",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Structure, composition and reusable infrastructure modules.",
+        "pl": "Struktura, kompozycja i wielokrotne użycie modułów infrastruktury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "terraform-tests",
+      "title": {
+        "en": "Terraform tests",
+        "pl": "Terraform tests"
+      },
+      "provider": "HashiCorp",
+      "url": "https://developer.hashicorp.com/terraform/language/tests",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Native tests for modules and infrastructure behavior.",
+        "pl": "Natywne testy modułów i zachowania infrastruktury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "ansible-start",
+      "title": {
+        "en": "Getting started with Ansible",
+        "pl": "Getting started with Ansible"
+      },
+      "provider": "Ansible",
+      "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Inventory, playbooks, idempotent tasks and first automation.",
+        "pl": "Inventory, playbooki, idempotentne zadania i pierwsza automatyzacja."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "packer",
+      "title": {
+        "en": "Packer tutorials",
+        "pl": "Packer tutorials"
+      },
+      "provider": "HashiCorp",
+      "url": "https://developer.hashicorp.com/packer/tutorials",
+      "type": {
+        "en": "Official tutorials",
+        "pl": "Official tutorials"
+      },
+      "note": {
+        "en": "Build reproducible machine images from code.",
+        "pl": "Budowanie powtarzalnych obrazów maszyn z kodu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "prometheus",
+      "title": {
+        "en": "Prometheus first steps",
+        "pl": "Prometheus first steps"
+      },
+      "provider": "Prometheus",
+      "url": "https://prometheus.io/docs/introduction/first_steps/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Metrics, scraping, queries and a first alerting rule.",
+        "pl": "Metryki, scraping, zapytania i pierwsza reguła alertu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "grafana",
+      "title": {
+        "en": "Grafana fundamentals",
+        "pl": "Grafana fundamentals"
+      },
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/tutorials/grafana-fundamentals/",
+      "type": {
+        "en": "Free tutorial",
+        "pl": "Free tutorial"
+      },
+      "note": {
+        "en": "Create a data source, dashboard and useful visualization.",
+        "pl": "Tworzenie źródła danych, dashboardu i użytecznej wizualizacji."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "otel",
+      "title": {
+        "en": "What is OpenTelemetry?",
+        "pl": "What is OpenTelemetry?"
+      },
+      "provider": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/what-is-opentelemetry/",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "Vendor-neutral signals, instrumentation and collection.",
+        "pl": "Niezależne od dostawcy sygnały, instrumentacja i zbieranie danych."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-monitoring",
+      "title": {
+        "en": "Monitoring Distributed Systems",
+        "pl": "Monitoring Distributed Systems"
+      },
+      "provider": "Google SRE",
+      "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "What to monitor and how to avoid low-value signals.",
+        "pl": "Co monitorować i jak unikać sygnałów o niskiej wartości."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-alerting",
+      "title": {
+        "en": "Alerting on SLOs",
+        "pl": "Alerting on SLOs"
+      },
+      "provider": "Google SRE Workbook",
+      "url": "https://sre.google/workbook/alerting-on-slos/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "Actionable alerting based on user impact and burn rate.",
+        "pl": "Alerty oparte na wpływie na użytkownika i burn rate."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-incident",
+      "title": {
+        "en": "Managing Incidents",
+        "pl": "Managing Incidents"
+      },
+      "provider": "Google SRE",
+      "url": "https://sre.google/sre-book/managing-incidents/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "Roles, communication and control during incidents.",
+        "pl": "Role, komunikacja i kontrola podczas incydentów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-postmortem",
+      "title": {
+        "en": "Postmortem Culture",
+        "pl": "Postmortem Culture"
+      },
+      "provider": "Google SRE",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "type": {
+        "en": "Book chapter",
+        "pl": "Book chapter"
+      },
+      "note": {
+        "en": "Blameless learning and actionable follow-up after incidents.",
+        "pl": "Uczenie się bez obwiniania i konkretne działania po incydencie."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sre-books",
+      "title": {
+        "en": "Google SRE books",
+        "pl": "Google SRE books"
+      },
+      "provider": "Google",
+      "url": "https://sre.google/books/",
+      "type": {
+        "en": "Free books",
+        "pl": "Free books"
+      },
+      "note": {
+        "en": "The SRE book, workbook and production reliability guidance.",
+        "pl": "Książka SRE, workbook i materiały o niezawodności produkcji."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "azure-patterns",
+      "title": {
+        "en": "Cloud Design Patterns",
+        "pl": "Cloud Design Patterns"
+      },
+      "provider": "Microsoft",
+      "url": "https://learn.microsoft.com/azure/architecture/patterns/",
+      "type": {
+        "en": "Architecture patterns",
+        "pl": "Architecture patterns"
+      },
+      "note": {
+        "en": "Retries, circuit breakers, queues, bulkheads and more.",
+        "pl": "Retry, circuit breaker, kolejki, bulkhead i inne wzorce."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "chaos",
+      "title": {
+        "en": "Principles of Chaos Engineering",
+        "pl": "Principles of Chaos Engineering"
+      },
+      "provider": "Chaos Community",
+      "url": "https://principlesofchaos.org/",
+      "type": {
+        "en": "Principles",
+        "pl": "Principles"
+      },
+      "note": {
+        "en": "A concise model for controlled resilience experiments.",
+        "pl": "Zwięzły model kontrolowanych eksperymentów odporności."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "owasp-cheatsheets",
+      "title": {
+        "en": "OWASP Cheat Sheet Series",
+        "pl": "OWASP Cheat Sheet Series"
+      },
+      "provider": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/",
+      "type": {
+        "en": "Security guides",
+        "pl": "Security guides"
+      },
+      "note": {
+        "en": "Practical, focused application and infrastructure security guidance.",
+        "pl": "Praktyczne, skupione wskazówki o bezpieczeństwie aplikacji i infrastruktury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "openssf-training",
+      "title": {
+        "en": "OpenSSF training",
+        "pl": "OpenSSF training"
+      },
+      "provider": "OpenSSF",
+      "url": "https://openssf.org/training/",
+      "type": {
+        "en": "Free courses",
+        "pl": "Free courses"
+      },
+      "note": {
+        "en": "Secure software development and supply-chain courses.",
+        "pl": "Kursy bezpiecznego tworzenia oprogramowania i łańcucha dostaw."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cisa-secure",
+      "title": {
+        "en": "Secure by Design",
+        "pl": "Secure by Design"
+      },
+      "provider": "CISA",
+      "url": "https://www.cisa.gov/securebydesign",
+      "type": {
+        "en": "Guidance",
+        "pl": "Guidance"
+      },
+      "note": {
+        "en": "Security principles that make safe defaults a product requirement.",
+        "pl": "Zasady bezpieczeństwa, w których bezpieczne domyślne ustawienia są wymaganiem."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "sigstore",
+      "title": {
+        "en": "Securing Your Software Supply Chain with Sigstore",
+        "pl": "Securing Your Software Supply Chain with Sigstore"
+      },
+      "provider": "OpenSSF",
+      "url": "https://openssf.org/training/securing-your-software-supply-chain-with-sigstore-course/",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "Signing and verifying software artifacts and provenance.",
+        "pl": "Podpisywanie i weryfikowanie artefaktów oraz provenance."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "k8s-basics",
+      "title": {
+        "en": "Kubernetes Basics",
+        "pl": "Kubernetes Basics"
+      },
+      "provider": "Kubernetes",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Deploy, expose, scale, update and debug a first workload.",
+        "pl": "Wdrożenie, wystawienie, skalowanie, aktualizacja i debugowanie workloadu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "k8s-concepts",
+      "title": {
+        "en": "Kubernetes concepts",
+        "pl": "Kubernetes concepts"
+      },
+      "provider": "Kubernetes",
+      "url": "https://kubernetes.io/docs/concepts/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "The canonical reference for workloads, services, storage and policy.",
+        "pl": "Główna dokumentacja workloadów, usług, storage i polityk."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "k8s-debug",
+      "title": {
+        "en": "Debug applications",
+        "pl": "Debug applications"
+      },
+      "provider": "Kubernetes",
+      "url": "https://kubernetes.io/docs/tasks/debug/debug-application/",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "A structured route through pod and service troubleshooting.",
+        "pl": "Uporządkowana ścieżka diagnostyki podów i usług."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "k8s-security",
+      "title": {
+        "en": "Kubernetes security checklist",
+        "pl": "Kubernetes security checklist"
+      },
+      "provider": "Kubernetes",
+      "url": "https://kubernetes.io/docs/concepts/security/security-checklist/",
+      "type": {
+        "en": "Official checklist",
+        "pl": "Official checklist"
+      },
+      "note": {
+        "en": "Practical cluster and workload security checks.",
+        "pl": "Praktyczne kontrole bezpieczeństwa klastra i workloadów."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "helm",
+      "title": {
+        "en": "Helm quickstart",
+        "pl": "Helm quickstart"
+      },
+      "provider": "Helm",
+      "url": "https://helm.sh/docs/intro/quickstart/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Install, inspect and manage a first chart.",
+        "pl": "Instalacja, sprawdzenie i zarządzanie pierwszym chartem."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "kustomize",
+      "title": {
+        "en": "Declarative management with Kustomize",
+        "pl": "Declarative management with Kustomize"
+      },
+      "provider": "Kubernetes",
+      "url": "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Compose environment-specific manifests without templating.",
+        "pl": "Składanie manifestów dla środowisk bez templatingu."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "opengitops",
+      "title": {
+        "en": "OpenGitOps principles",
+        "pl": "OpenGitOps principles"
+      },
+      "provider": "OpenGitOps",
+      "url": "https://opengitops.dev/",
+      "type": {
+        "en": "Principles",
+        "pl": "Principles"
+      },
+      "note": {
+        "en": "The four core principles of GitOps.",
+        "pl": "Cztery podstawowe zasady GitOps."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "argocd",
+      "title": {
+        "en": "Argo CD getting started",
+        "pl": "Argo CD getting started"
+      },
+      "provider": "Argo CD",
+      "url": "https://argo-cd.readthedocs.io/en/stable/getting_started/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Deploy and reconcile an application from Git.",
+        "pl": "Wdrożenie i uzgadnianie aplikacji z repozytorium Git."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "kafka",
+      "title": {
+        "en": "Apache Kafka quickstart",
+        "pl": "Apache Kafka quickstart"
+      },
+      "provider": "Apache Kafka",
+      "url": "https://kafka.apache.org/quickstart",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Create topics, publish records and consume a stream.",
+        "pl": "Tworzenie topiców, publikowanie rekordów i odczyt strumienia."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "redis",
+      "title": {
+        "en": "Redis data types",
+        "pl": "Redis data types"
+      },
+      "provider": "Redis",
+      "url": "https://redis.io/docs/latest/develop/data-types/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Understand when strings, hashes, sets, streams and TTLs fit.",
+        "pl": "Poznaj zastosowania stringów, hashy, setów, streamów i TTL."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "cncf-platforms",
+      "title": {
+        "en": "Platforms White Paper",
+        "pl": "Platforms White Paper"
+      },
+      "provider": "CNCF",
+      "url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
+      "type": {
+        "en": "White paper",
+        "pl": "White paper"
+      },
+      "note": {
+        "en": "Platform definitions, capabilities, users and product thinking.",
+        "pl": "Definicje platform, capabilities, użytkownicy i myślenie produktowe."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "backstage",
+      "title": {
+        "en": "Backstage getting started",
+        "pl": "Backstage getting started"
+      },
+      "provider": "Backstage",
+      "url": "https://backstage.io/docs/getting-started/",
+      "type": {
+        "en": "Official tutorial",
+        "pl": "Official tutorial"
+      },
+      "note": {
+        "en": "Explore a service catalog and developer portal foundation.",
+        "pl": "Poznaj service catalog i podstawy portalu developerskiego."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "opa",
+      "title": {
+        "en": "Open Policy Agent documentation",
+        "pl": "Open Policy Agent documentation"
+      },
+      "provider": "OPA",
+      "url": "https://www.openpolicyagent.org/docs/latest/",
+      "type": {
+        "en": "Official documentation",
+        "pl": "Official documentation"
+      },
+      "note": {
+        "en": "Policy decisions as code across CI, Kubernetes and APIs.",
+        "pl": "Decyzje polityk jako kod w CI, Kubernetes i API."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "finops",
+      "title": {
+        "en": "What is FinOps?",
+        "pl": "What is FinOps?"
+      },
+      "provider": "FinOps Foundation",
+      "url": "https://www.finops.org/introduction/what-is-finops/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "Principles, personas and practices for cloud value.",
+        "pl": "Zasady, role i praktyki zarządzania wartością chmury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "tech-writing",
+      "title": {
+        "en": "Technical Writing One",
+        "pl": "Technical Writing One"
+      },
+      "provider": "Google for Developers",
+      "url": "https://developers.google.com/tech-writing/one",
+      "type": {
+        "en": "Free course",
+        "pl": "Free course"
+      },
+      "note": {
+        "en": "Clear sentences, paragraphs and technical explanations.",
+        "pl": "Jasne zdania, akapity i wyjaśnienia techniczne."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "adr",
+      "title": {
+        "en": "Architecture Decision Records",
+        "pl": "Architecture Decision Records"
+      },
+      "provider": "ADR community",
+      "url": "https://adr.github.io/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "Record context, decisions and consequences without heavy documentation.",
+        "pl": "Zapisuj kontekst, decyzje i konsekwencje bez ciężkiej dokumentacji."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "c4",
+      "title": {
+        "en": "The C4 model",
+        "pl": "The C4 model"
+      },
+      "provider": "C4 model",
+      "url": "https://c4model.com/",
+      "type": {
+        "en": "Guide",
+        "pl": "Guide"
+      },
+      "note": {
+        "en": "A simple hierarchy for useful software architecture diagrams.",
+        "pl": "Prosta hierarchia użytecznych diagramów architektury."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "github-readme",
+      "title": {
+        "en": "Quickstart for writing on GitHub",
+        "pl": "Quickstart for writing on GitHub"
+      },
+      "provider": "GitHub",
+      "url": "https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "Structure readable READMEs and project evidence.",
+        "pl": "Buduj czytelne README i dowody umiejętności."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "openai-prompts",
+      "title": {
+        "en": "Prompt engineering best practices",
+        "pl": "Prompt engineering best practices"
+      },
+      "provider": "OpenAI",
+      "url": "https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api",
+      "type": {
+        "en": "Official guide",
+        "pl": "Official guide"
+      },
+      "note": {
+        "en": "Clear instructions, context, constraints and iterative refinement.",
+        "pl": "Jasne instrukcje, kontekst, ograniczenia i iteracyjne poprawianie."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "copilot-responsible",
+      "title": {
+        "en": "Responsible use of GitHub Copilot",
+        "pl": "Responsible use of GitHub Copilot"
+      },
+      "provider": "GitHub",
+      "url": "https://docs.github.com/copilot/responsible-use",
+      "type": {
+        "en": "Official guidance",
+        "pl": "Official guidance"
+      },
+      "note": {
+        "en": "Limitations, review responsibilities and safe use of generated output.",
+        "pl": "Ograniczenia, odpowiedzialność za review i bezpieczne użycie wyników."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "nist-ai",
+      "title": {
+        "en": "AI Risk Management Framework",
+        "pl": "AI Risk Management Framework"
+      },
+      "provider": "NIST",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "type": {
+        "en": "Framework",
+        "pl": "Framework"
+      },
+      "note": {
+        "en": "A structured way to govern and evaluate AI risk.",
+        "pl": "Uporządkowane podejście do zarządzania i oceny ryzyka AI."
+      },
+      "language": "EN",
+      "free": true
+    },
+    {
+      "id": "owasp-llm",
+      "title": {
+        "en": "OWASP Top 10 for LLM Applications",
+        "pl": "OWASP Top 10 for LLM Applications"
+      },
+      "provider": "OWASP",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "type": {
+        "en": "Security guide",
+        "pl": "Security guide"
+      },
+      "note": {
+        "en": "Common security risks in LLM-enabled systems and workflows.",
+        "pl": "Typowe ryzyka bezpieczeństwa w systemach i workflow z LLM."
+      },
+      "language": "EN",
+      "free": true
+    }
+  ]
 };
